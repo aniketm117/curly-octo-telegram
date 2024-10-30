@@ -2,11 +2,25 @@ import streamlit as st
 
 st.title('🏗️ Q&A on Vectors ')
 
-disclaimer = "Answer"
+"""Many quantities we think about daily can be described by a single number: temperature, speed
+, mass, weight and height. There are also many other concepts we encounter daily that cannot be
+ described with just one number. For instance, a weather forecaster often describes wind with
+  its speed and its direction. 
+
+When applying a force, we are concerned with both the magnitude and direction of that force.
+ In both of these examples, direction is important. Because of this, we study vectors,
+  mathematical objects that convey both magnitude and direction information.
+
+One "bare--bones'' definition of a vector is based on what we wrote above: "a vector
+is a mathematical object with magnitude and direction parameters.'' This definition
+ leaves much to be desired, as it gives no indication as to how such an object is to 
+ be used."""
 
 with st.expander(
-        "Q 1.	At what angle three forces of equal magnitude may act so that their resultant is equal to zero."):
-    st.info("120 degrees")
+        "Q 1.	At what angle three forces of equal magnitude may act so that their"
+        " resultant is equal to zero."):
+    st.info("We can see by symmetry that if the forces are inclined to each other at "
+            "120 degrees then their sum would be null vector.")
 
 with st.expander("Q 2.	Can the resultant of three unequal forces be equal to zero ?"):
     st.info("Yes, if they can form a triangle.")
@@ -117,4 +131,4 @@ with st.expander("Q 27.	Is it correct that the component of a vector is a vector
 
 with st.expander("Q 28.	Is it correct to say that if a vector is zero then each"
                  " of its rectangular components must be zero?"):
-    st.info("Ja.")
+    st.info("Yes.")
