@@ -1,2 +1,3 @@
 # curly-octo-telegram
-A simple Q &amp; A page for Vectors
+
+Created with the goal of being a complete solution for a student`s revision.

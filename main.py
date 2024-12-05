@@ -2,7 +2,7 @@ import streamlit as st
 
 import graphviz
 
-st.title('A Guide to Physics 🐦‍⬛')
+st.title('A Guide to Physics Revision 🐦‍⬛')
 
 # Create a graphlib graph object
 with st.expander('About this page'):
