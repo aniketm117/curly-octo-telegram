@@ -55,42 +55,40 @@ with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a s
             confirm Ohms Law? Show the calculation."""):
 
     st.info("""**Answer:**
-            Ohm's Law states:
+    
+        Ohm's Law states
             
-            V = I * R
-            
-            From the given data:
-            
-            I = 0.5 , V = 5 , R = ?
-            
-            
-            Calculate R :
-            
-            R = {V}/{I} = 5 / 0.5 = 10 
-                        
-            The calculated resistance matches the resistor's given value 10ohm. Thus, the results confirm Ohm's Law.
+        V = I * R
+        
+        From the given data:
+        
+        I = 0.5 , V = 5 , R = ?
+        
+        
+        Calculate R:
+        
+        R = {V}/{I} = 5 / 0.5 = 10 
+                    
+        The calculated resistance matches the resistor's given value 10ohm. Thus, the results confirm Ohm's Law.
             """)
 
 with st.expander("""**2. Question:**
                  Why is it important to connect the voltmeter in parallel and the ammeter in series in the circuit
                  during the experiment?"""):
     st.info("""**Answer:**
-    
-            The **voltmeter** measures the potential difference across the resistor. It must be connected
-            in **parallel** so it measures the voltage drop across the resistor without affecting the current flow
+            The voltmeter measures the potential difference across the resistor. It must be connected
+            in parallel so it measures the voltage drop across the resistor without affecting the current flow
             through it. Voltmeters have high resistance, minimizing current flow through them. 
-            - The **ammeter** measures the total current flowing in the circuit. It must be connected in **series**
-             to ensure the same current flows through both the ammeter and the resistor. Ammeters have very low
-              resistance to avoid altering
+            - The ammeter measures the total current flowing in the circuit. It must be connected in series
+            to ensure the same current flows through both the ammeter and the resistor. Ammeters have very low
+            resistance to avoid altering
             the circuit's current.""")
 
 with st.expander("""**3. Question:**
                  If a student plots a graph of voltage V versus current I for a resistor and observes a curve
                  instead of a straight line, what might be the reason?
                  ?"""):
-    st.info("""**Answer:**
-    
-            The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
+    st.info("""The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
             1. **Non-ohmic behavior:** The resistor may not be an ohmic conductor. Examples include diodes or filament
              bulbs, where resistance changes with temperature or voltage.
             2. **Overheating of the resistor:** At higher currents, the resistor might heat up, changing its resistance.
