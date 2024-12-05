@@ -20,11 +20,18 @@ is a mathematical object with magnitude and direction parameters.'' This definit
 
 with st.expander("Q 1.	At what angle three forces of equal magnitude may act so that their"
                  " resultant is equal to zero."):
-    st.info("We can see by symmetry that if the forces are inclined to each other at "
-            "120 degrees then their sum would be null vector.")
+
+    st.info("""**Symmetry:**
+    
+            We can see by symmetry that if the forces are inclined to each other at
+            120 degrees then their sum would be null vector.""")
 
 with st.expander("Q 2.	Can the resultant of three unequal forces be equal to zero ?"):
-    st.info("Yes, if they can form a triangle.")
+    st.info("""**Triangle Law of Vector Addition:**
+            
+            Yes, if they can form a triangle.""")
 
 with st.expander("Q 3.	There are three forces 4N, 5N and 10 N, can their resultant be equal to zero?"):
-    st.info("No, these forces cannot form a triangle.")
+    st.info("""**Triangle Law of Vector Addition:**
+            
+             No, these forces cannot form a triangle.""")
