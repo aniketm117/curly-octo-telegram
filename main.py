@@ -9,6 +9,11 @@ with st.expander('About this page'):
     st.info('The possible pathways one can take to complete their Physics prep for '
             'whatever goal one may be aspiring to in XI and XII Class.')
 
+audio_file = open("audio/Spotify.mp3", "rb")
+audio_bytes = audio_file.read()
+
+st.audio(audio_bytes, format="audio/mp3")
+
 graph = graphviz.Digraph()
 graph.edge('Start', 'Units and Dimension')
 graph.edge('Units and Dimension', 'Vectors')
