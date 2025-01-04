@@ -14,10 +14,10 @@ audio_bytes = audio_file.read()
 
 st.audio(audio_bytes, format="audio/mp3")
 
-audio_file = open("audio/No_One_Survives.mp3", "rb")
-audio_bytes = audio_file.read()
+# audio_file = open("audio/No_One_Survives.mp3", "rb")
+# audio_bytes = audio_file.read()
 
-st.audio(audio_bytes, format="audio/mp3")
+# st.audio(audio_bytes, format="audio/mp3")
 
 graph = graphviz.Digraph()
 graph.edge('Start', 'Units and Dimension')
