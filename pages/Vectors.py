@@ -7,16 +7,13 @@ import streamlit as st
 Many quantities we think about daily can be described by a single number: temperature, speed
 , mass, weight and height. There are also many other concepts we encounter daily that cannot be
  described with just one number. For instance, a weather forecaster often describes wind with
-  its speed and its direction. 
+  its speed and its direction.
 
 When applying a force, we are concerned with both the magnitude and direction of that force.
  In both of these examples, direction is important. Because of this, we study vectors,
-  mathematical objects that convey both magnitude and direction information.
+  mathematical objects that convey both magnitude and direction information."""
 
-One "bare--bones'' definition of a vector is based on what we wrote above: "a vector
-is a mathematical object with magnitude and direction parameters.'' This definition
- leaves much to be desired, as it gives no indication as to how such an object is to 
- be used."""
+st.info("A vector is a mathematical object with magnitude and direction parameters.")
 
 with st.expander("Q 1.	At what angle three forces of equal magnitude may act so that their"
                  " resultant is equal to zero."):

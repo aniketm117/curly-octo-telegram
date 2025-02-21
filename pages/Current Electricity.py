@@ -27,11 +27,6 @@ where:
 - Connect the resistor R in series with the ammeter and power supply.
 - The voltmeter is connected in parallel across the resistor to measure the potential difference.
 
-```
-Power Supply (+) -- Ammeter -- Resistor -- Power Supply (-)
-                         |
-                     Voltmeter
-```
 
 #### **Procedure:**
 1. Assemble the circuit as per the diagram.
@@ -64,10 +59,9 @@ with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a s
         
         I = 0.5 , V = 5 , R = ?
         
-        
         Calculate R:
         
-        R = {V}/{I} = 5 / 0.5 = 10 
+        R = {V}/{I} = 5 / 0.5 = 10
                     
         The calculated resistance matches the resistor's given value 10ohm. Thus, the results confirm Ohm's Law.
             """)
