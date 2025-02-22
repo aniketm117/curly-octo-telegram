@@ -9,7 +9,7 @@ with st.expander('About this page'):
     st.info('The possible pathways one can take to complete their Physics prep for '
             'whatever goal one may be aspiring to in XI and XII Class.')
 
-audio_file = open("audio/desi_spiderman_official_song_-_SPIDERMAN_SPOOF_[YouAreTube.com].mp3", "rb")
+audio_file = open("audio/YouTube_[YouAreTube.com].mp3", "rb")
 audio_bytes = audio_file.read()
 
 st.audio(audio_bytes, format="audio/mp3")
