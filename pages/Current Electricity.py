@@ -23,13 +23,13 @@ where:
 6. **Connecting wires** and **breadboard** (or similar circuit assembly tools).
 7. **Switch:** To control the flow of current.
 
-#### **Circuit Diagram:**
+#### **Circuit Scheme:**
 - Connect the resistor R in series with the ammeter and power supply.
 - The voltmeter is connected in parallel across the resistor to measure the potential difference.
 
 
 #### **Procedure:**
-1. Assemble the circuit as per the diagram.
+1. Assemble the circuit as per the scheme.
 2. Adjust the power supply to provide a known voltage.
 3. Record the readings of the voltmeter **V** and ammeter **I**.
 4. Vary the voltage using the power supply or rheostat and repeat the measurements for several values of **V**
@@ -48,9 +48,7 @@ For a given resistor,R should remain constant for all values of V and I, confirm
 with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a student sets up a circuit with a resistor 
             of 10 ohm. The student measures a current of 0.5 A when the applied voltage is 5 V. Does this
             confirm Ohms Law? Show the calculation."""):
-
-    st.info("""**Answer:**
-    
+    st.write("""    
         Ohm's Law states
             
         V = I * R
@@ -69,20 +67,18 @@ with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a s
 with st.expander("""**2. Question:**
                  Why is it important to connect the voltmeter in parallel and the ammeter in series in the circuit
                  during the experiment?"""):
-    st.info("""**Answer:**
-            The voltmeter measures the potential difference across the resistor. It must be connected
-            in parallel so it measures the voltage drop across the resistor without affecting the current flow
-            through it. Voltmeters have high resistance, minimizing current flow through them. 
-            - The ammeter measures the total current flowing in the circuit. It must be connected in series
-            to ensure the same current flows through both the ammeter and the resistor. Ammeters have very low
-            resistance to avoid altering
-            the circuit's current.""")
+    st.write("""
+            The voltmeter measures the potential difference across the resistor. It must be connected in parallel so
+            it measures the voltage drop across the resistor without affecting the current flow through it. Voltmeters
+            have high resistance, minimizing current flow through them. The ammeter measures the total current flowing 
+            in the circuit. It must be connected in series to ensure the same current flows through both the ammeter and 
+            the resistor. Ammeters have very low resistance to avoid altering the circuit's current.""")
 
 with st.expander("""**3. Question:**
                  If a student plots a graph of voltage V versus current I for a resistor and observes a curve
                  instead of a straight line, what might be the reason?
                  ?"""):
-    st.info("""The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
+    st.write("""The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
             1. **Non-ohmic behavior:** The resistor may not be an ohmic conductor. Examples include diodes or filament
              bulbs, where resistance changes with temperature or voltage.
             2. **Overheating of the resistor:** At higher currents, the resistor might heat up, changing its resistance.
