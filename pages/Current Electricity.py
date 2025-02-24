@@ -68,21 +68,29 @@ with st.expander("""**2. Question:**
                  Why is it important to connect the voltmeter in parallel and the ammeter in series in the circuit
                  during the experiment?"""):
     st.write("""
-            The voltmeter measures the potential difference across the resistor. It must be connected in parallel so
-            it measures the voltage drop across the resistor without affecting the current flow through it. Voltmeters
-            have high resistance, minimizing current flow through them. The ammeter measures the total current flowing 
-            in the circuit. It must be connected in series to ensure the same current flows through both the ammeter and 
-            the resistor. Ammeters have very low resistance to avoid altering the circuit's current.""")
+            - The voltmeter measures the potential difference across the resistor. 
+            - It must be connected in parallel so it measures the voltage drop across the resistor without affecting the
+            current flow through it. 
+            - Voltmeters have high resistance, minimizing current flow through them. The ammeter measures the total 
+            current flowing in the circuit. 
+            - Ammeter must be connected in series to ensure the same current flows through both the ammeter and 
+            the resistor. 
+            - Ammeters have very low resistance to avoid altering the circuit's current.""")
 
 with st.expander("""**3. Question:**
                  If a student plots a graph of voltage V versus current I for a resistor and observes a curve
                  instead of a straight line, what might be the reason?
                  ?"""):
-    st.write("""The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
-            1. **Non-ohmic behavior:** The resistor may not be an ohmic conductor. Examples include diodes or filament
-             bulbs, where resistance changes with temperature or voltage.
-            2. **Overheating of the resistor:** At higher currents, the resistor might heat up, changing its resistance.
-            3. **Faulty apparatus:** Errors in the connections, or a malfunctioning resistor, voltmeter, or ammeter,
+    st.write("""
+        The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
+    
+        - Non-ohmic behavior: The resistor may not be an ohmic conductor. Examples include diodes or filament
+          bulbs, where resistance changes with temperature or voltage.
+             
+        - Overheating of the resistor: At higher currents, the resistor might heat up, changing its resistance.
+            
+        - Faulty apparatus: Errors in the connections, or a malfunctioning resistor, voltmeter, or ammeter,
              can cause deviations.
-            To address this, ensure the resistor is ohmic, the connections are correct, and the apparatus is functioning
-             properly.""")
+             
+        To address this, ensure the resistor is ohmic, the connections are correct, and the apparatus is functioning
+        properly.""")

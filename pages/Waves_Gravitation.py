@@ -3,7 +3,7 @@ import streamlit as st
 st.info("Objective: To find the values of distinct variables (A1, A2, A3 etc.) mentioned in various statements, and to"
         " evaluate true / false questions or MSQs.")
 
-st.warning("Suggestion: To attempt the sheets A, B and C, you may give the sheets to your class-mates and discuss the"
+st.warning("Suggestion: To attempt the sheets A, B and C, you may share this page with your class-mates and discuss the"
            " answers with them.")
 
 st.write("""Sheet A
