@@ -185,7 +185,7 @@ with C3:
     with st.popover("C3"):
         st.write("2")
 
-sentiment_mapping = ["one", "two", "three", "four", "five"]
-selected = st.feedback("stars")
-if selected is not None:
-    st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
+# sentiment_mapping = [0, 1]
+# selected = st.feedback("thumbs")
+# if selected is not None:
+#     st.markdown("Thanks for your feedback!")
