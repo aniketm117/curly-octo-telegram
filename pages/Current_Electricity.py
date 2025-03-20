@@ -1,6 +1,4 @@
 import streamlit as st
-import plotly.figure_factory as ff
-from plotly.graph_objs import Scatter
 
 # Current Electricity
 
