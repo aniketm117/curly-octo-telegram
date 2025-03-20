@@ -1,4 +1,6 @@
 import streamlit as st
+import plotly.figure_factory as ff
+from plotly.graph_objs import Scatter
 
 # Current Electricity
 
@@ -43,7 +45,11 @@ For a given resistor,R should remain constant for all values of V and I, confirm
 - Plot a graph of V (y-axis) against I (x-axis). 
 - The graph should be a straight line passing through the origin, with the slope equal to R (resistance)."""
 
-### **Questions and Answers**
+i = [1, 2, 3, 4, 5, 6]
+
+V = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+
+# Questions and Answers
 
 with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a student sets up a circuit with a resistor 
             of 10 ohm. The student measures a current of 0.5 A when the applied voltage is 5 V. Does this
