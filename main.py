@@ -1,18 +1,13 @@
 import streamlit as st
 
-st.title('A Guide to Physics Revision 🐦‍⬛')
+st.title('🌃 A Guide to Physics Revision')
 
-# audio_file = open("audio/YouTube_[YouAreTube.com].mp3", "rb")
+# audio_file = open("audio/Spotify.mp3", "rb")
 # audio_bytes = audio_file.read()
 #
 # st.audio(audio_bytes, format="audio/mp3")
 
-audio_file = open("audio/Spotify.mp3", "rb")
-audio_bytes = audio_file.read()
-
-st.audio(audio_bytes, format="audio/mp3")
-
-clmn1, clmn2, clmn3 = st.columns(3)
+clmn1, clmn2, clmn3, clmn4, clmn5 = st.columns(5)
 
 with clmn1:
     st.page_link("pages/Vectors.py",
@@ -23,11 +18,23 @@ with clmn1:
 with clmn2:
     st.page_link("pages/Current_Electricity.py",
                  label="Current Electricity",
-                 icon="🧙",
+                 icon="🐛",
                  use_container_width=True)
 
 with clmn3:
     st.page_link("pages/Waves.py",
                  label="Waves",
-                 icon="🦗",
+                 icon="🌊",
+                 use_container_width=True)
+
+with clmn4:
+    st.page_link("pages/Roadmap.py",
+                 label="Roadmap",
+                 icon="🧙",
+                 use_container_width=True)
+
+with clmn5:
+    st.page_link("pages/Rotational_Motion.py",
+                 label="Rotational Motion",
+                 icon="🌴",
                  use_container_width=True)
