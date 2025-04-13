@@ -13,45 +13,66 @@ where:
 - V : Voltage across the resistor (in volts, V)  
 - I : Current flowing through the resistor (in amperes, A)  
 - R : Resistance of the resistor (in ohms)  
+"""
 
-#### **Apparatus Needed:**
-1. **Power supply:** Provides a range of voltages (e.g., DC power supply or batteries).
-2. **Resistor:** Known resistance value R.
-3. **Voltmeter:** Measures the voltage across the resistor.
-4. **Ammeter:** Measures the current through the resistor.
-5. **Rheostat (optional):** To vary the current in the circuit.
-6. **Connecting wires** and **breadboard** (or similar circuit assembly tools).
-7. **Switch:** To control the flow of current.
+tabs = st.tabs(['Apparatus Needed','Circuit Scheme','Procedure',
+                'Expected Result','Graphical Verification'])
 
-#### **Circuit Scheme:**
-- Connect the resistor R in series with the ammeter and power supply.
-- The voltmeter is connected in parallel across the resistor to measure the potential difference.
+with tabs[0]:
+    """
+    1. **Power supply:** Provides a range of voltages (e.g., DC power supply or batteries).
+    2. **Resistor:** Known resistance value R.
+    3. **Voltmeter:** Measures the voltage across the resistor.
+    4. **Ammeter:** Measures the current through the resistor.
+    5. **Rheostat (optional):** To vary the current in the circuit.
+    6. **Connecting wires** and **breadboard** (or similar circuit assembly tools).
+    7. **Switch:** To control the flow of current.
+    """
+with tabs[1]:
+    """
+    - Connect the resistor R in series with the ammeter and power supply.
+    - The voltmeter is connected in parallel across the resistor to measure the potential difference.
+    """
 
+with tabs[2]:
+    """
+    1. Assemble the circuit as per the scheme.
+    2. Adjust the power supply to provide a known voltage.
+    3. Record the readings of the voltmeter **V** and ammeter **I**.
+    4. Vary the voltage using the power supply or rheostat and repeat the measurements for several values of **V**
+    and **I**.
+    5. Calculate the resistance **R** for each pair of readings using the formula R = V / I.
+    """
 
-#### **Procedure:**
-1. Assemble the circuit as per the scheme.
-2. Adjust the power supply to provide a known voltage.
-3. Record the readings of the voltmeter **V** and ammeter **I**.
-4. Vary the voltage using the power supply or rheostat and repeat the measurements for several values of **V**
- and **I**.
-5. Calculate the resistance **R** for each pair of readings using the formula R = V / I.
+with tabs[3]:
+    """
+    The ratio V / I should remain constant throughout the observations.
+    """
+with tabs[4]:
+    """
+    - Plot a graph of voltage against current. 
+    - The graph should be a straight line passing through the origin, with the slope equal to R (resistance).
+    """
 
-#### **Expected Result:**
-For a given resistor,R should remain constant for all values of V and I, confirming Ohm's Law.
+    data = {'Current': [1, 2, 3, 4, 5, 6],
+            'Voltage': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]}
 
-#### **Graphical Verification:**
-- Plot a graph of V (y-axis) against I (x-axis). 
-- The graph should be a straight line passing through the origin, with the slope equal to R (resistance)."""
+    option = st.selectbox("Select the data to be shown on x-axis",
+                          ['Voltage', 'Current'])
 
-i = [1, 2, 3, 4, 5, 6]
+    if option == 'Voltage':
+        option_2 = 'Current'
+    else:
+        option_2 = 'Voltage'
 
-V = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+    st.line_chart(data, x=option, y=option_2)
 
 # Questions and Answers
 
 with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a student sets up a circuit with a resistor 
-            of 10 ohm. The student measures a current of 0.5 A when the applied voltage is 5 V. Does this
-            confirm Ohms Law? Show the calculation."""):
+            of 10 ohm. The student measures a current of i = [1, 2, 3, 4, 5, 6] when the applied voltage is V = [0.1, 0.
+            2, 0.3, 0.4, 0.5, 0.6] respectively. Does this confirm Ohms Law? Show the calculation."""):
+
     st.write("""    
         Ohm's Law states
             
@@ -59,11 +80,13 @@ with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a s
         
         From the given data:
         
-        I = 0.5 , V = 5 , R = ?
+        I = [1, 2, 3, 4, 5, 6] , 
+        
+        V = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6] , R = ?
         
         Calculate R:
         
-        R = {V}/{I} = 5 / 0.5 = 10
+        R = {V}/{I} = 10
                     
         The calculated resistance matches the resistor's given value 10ohm. Thus, the results confirm Ohm's Law.
             """)

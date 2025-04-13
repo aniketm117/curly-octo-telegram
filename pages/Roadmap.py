@@ -1,11 +1,12 @@
 import graphviz
 import streamlit as st
 
-# Create a graphlib graph object
-with st.expander('About this page'):
-    st.write('The possible pathways one can take to complete their Physics prep for '
-             'whatever goal one may be aspiring to in XI and XII Class.')
 
+st.write("### Roadmap")
+st.write("The possible pathways one can take to complete their Physics prep for "
+         "whatever goal one may be aspiring to in XI and XII Class.")
+
+# Create a graphlib graph object
 
 graph = graphviz.Digraph()
 

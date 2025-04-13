@@ -5,8 +5,8 @@ import altair as alt
 from datetime import datetime, timedelta
 
 # Page title
-st.set_page_config(page_title='A Guide to Physics Revision', page_icon='🌃')
-st.title('🌃 A Guide to Physics Revision')
+st.set_page_config(page_title='A Guide to Physics Revision', page_icon='📚')
+st.title('📚 A Guide to Physics Revision')
 
 # audio_file = open("audio/Spotify.mp3", "rb")
 # audio_bytes = audio_file.read()
@@ -65,17 +65,17 @@ def generate_issue():
         "Unit vector application",
         "Force identification in Free Body diagrams",
         "Magnetic Field on the axis of a circular loop",
-        "Poynting Vector",
+        "Position Vector",
         "Force on an electron in Electric and Magnetic Fields",
-        "Davidson Germer Experiment",
+        "Davisson Germer Experiment",
         "Relation of Fringe width, Slit width and wavelength in YDSE",
         "External Work in Thermodynamics",
         "Do photons have mass ?",
-        "File server running out of storage space",
-        "Intrusion detection system alerts",
-        "Inventory management system errors",
-        "Customer data not loading in CRM",
-        "Collaboration tool not sending notifications"
+        "Magnetic Energy of a solenoid",
+        "Rotational Inertia",
+        "What is Torque and how is it different from a Force?",
+        "What is Angular Momemntum about an axis?",
+        "How are standing waves created ?"
     ]
     return np.random.choice(issues)
 
@@ -83,8 +83,8 @@ def generate_issue():
 ## Function to generate random dates
 start_date = datetime(2025, 4, 1)
 end_date = datetime(2025, 12, 20)
-id_values = ['TICKET-{}'.format(i) for i in range(1000, 1100)]
-issue_list = [generate_issue() for _ in range(100)]
+id_values = ['TICKET-{}'.format(i) for i in range(1000, 1050)]
+issue_list = [generate_issue() for _ in range(50)]
 
 
 def generate_random_dates(start_date, end_date, id_values):
@@ -92,10 +92,10 @@ def generate_random_dates(start_date, end_date, id_values):
     return np.random.choice(date_range, size=len(id_values), replace=False)
 
 
-## Generate 100 rows of data
+## Generate 50 rows of data
 data = {'Issue': issue_list,
-        'Status': np.random.choice(['Open', 'In Progress', 'Closed'], size=100),
-        'Priority': np.random.choice(['High', 'Medium', 'Low'], size=100),
+        'Status': np.random.choice(['Open', 'In Progress', 'Closed'], size=50),
+        'Priority': np.random.choice(['High', 'Medium', 'Low'], size=50),
         'Date Submitted': generate_random_dates(start_date, end_date, id_values)
         }
 df = pd.DataFrame(data)
@@ -145,8 +145,6 @@ with tabs[1]:
 
     st.markdown('**Things to try:**')
     st.info('1️⃣ Update Ticket **Status** or **Priority** and see how plots are updated in real-time!')
-    st.success(
-        '2️⃣ Change values in **Status** column from *"Open"* to either *"In Progress"* or *"Closed"*, then click on the **Sort DataFrame by the Status column** button to see the refreshed DataFrame with the sorted **Status** column.')
 
     edited_df = st.data_editor(st.session_state.df, use_container_width=True, hide_index=True, height=212,
                                column_config={'Status': st.column_config.SelectboxColumn(
