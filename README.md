@@ -1,3 +1,3 @@
 # curly-octo-telegram
 
-Created with the goal of being a complete solution for a student`s revision.
+[check it out here](https://aniketm117-curly-octo-telegram-main-nd22mb.streamlit.app/)
