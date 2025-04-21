@@ -24,7 +24,7 @@ with clmn1:
 with clmn2:
     st.page_link("pages/Current_Electricity.py",
                  label="Current Electricity",
-                 icon="🐛",
+                 icon="🔋",
                  use_container_width=True)
 
 with clmn3:
@@ -42,18 +42,18 @@ with clmn4:
 with clmn5:
     st.page_link("pages/Rotational_Motion.py",
                  label="Rotational Motion",
-                 icon="🌴",
+                 icon="🏀",
                  use_container_width=True)
 
 
 st.info('To write a ticket, fill out the form below. Check status or review ticketing analytics using the tabs below.')
 
 # Generate data
-## Set seed for reproducibility
+# Set seed for reproducibility
 np.random.seed(42)
 
 
-## Function to generate a random issue description
+# Function to generate a random issue description
 def generate_issue():
     issues = [
         "Dimension of Force",
@@ -74,13 +74,14 @@ def generate_issue():
         "Magnetic Energy of a solenoid",
         "Rotational Inertia",
         "What is Torque and how is it different from a Force?",
-        "What is Angular Momemntum about an axis?",
+        "What is Angular Momentum about an axis?",
         "How are standing waves created ?"
     ]
     return np.random.choice(issues)
 
 
-## Function to generate random dates
+# Function to generate random dates
+
 start_date = datetime(2025, 4, 1)
 end_date = datetime(2025, 12, 20)
 id_values = ['TICKET-{}'.format(i) for i in range(1000, 1050)]
@@ -92,7 +93,8 @@ def generate_random_dates(start_date, end_date, id_values):
     return np.random.choice(date_range, size=len(id_values), replace=False)
 
 
-## Generate 50 rows of data
+# Generate 50 rows of data
+
 data = {'Issue': issue_list,
         'Status': np.random.choice(['Open', 'In Progress', 'Closed'], size=50),
         'Priority': np.random.choice(['High', 'Medium', 'Low'], size=50),
@@ -102,7 +104,8 @@ df = pd.DataFrame(data)
 df.insert(0, 'ID', id_values)
 df = df.sort_values(by=['Status', 'ID'], ascending=[False, False])
 
-## Create DataFrame
+# Create DataFrame
+
 if 'df' not in st.session_state:
     st.session_state.df = df
 
