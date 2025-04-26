@@ -1,8 +1,8 @@
 import streamlit as st
 
 # Page title
-st.set_page_config(page_title='A Guide to Physics Revision', page_icon='📚')
-st.title('📚 A Guide to Physics Revision')
+st.set_page_config(page_title='Productivity App', page_icon='📚')
+st.title('📚 Productivity App')
 
 # audio_file = open("audio/Spotify.mp3", "rb")
 # audio_bytes = audio_file.read()
@@ -37,7 +37,10 @@ with clmn4:
 
 with clmn5:
     st.page_link("pages/Tickets.py",
-                 label="Rotational Motion",
+                 label="Tickets",
                  icon="🏀",
                  use_container_width=True)
 
+st.success("I have a friend who’s a fisherman. He says, ‘I have a simple rule for success in fishing. Fish where the"
+           " fish are.’ You want to fish where the doable questions are. That simple. If the fishing is really lousy "
+           "where you are you should probably look for another place to fish.")
