@@ -69,7 +69,7 @@ with tabs[4]:
 
 # Questions and Answers
 
-with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a student sets up a circuit with a resistor 
+with st.expander("""Q 1. In an experiment to verify Ohm’s Law, a student sets up a circuit with a resistor 
             of 10 ohm. The student measures a current of i = [1, 2, 3, 4, 5, 6] when the applied voltage is V = [0.1, 0.
             2, 0.3, 0.4, 0.5, 0.6] respectively. Does this confirm Ohms Law? Show the calculation."""):
 
@@ -91,9 +91,8 @@ with st.expander("""**1. Question:** In an experiment to verify Ohm’s Law, a s
         The calculated resistance matches the resistor's given value 10ohm. Thus, the results confirm Ohm's Law.
             """)
 
-with st.expander("""**2. Question:**
-                 Why is it important to connect the voltmeter in parallel and the ammeter in series in the circuit
-                 during the experiment?"""):
+with st.expander("Q 2. Why is it important to connect the voltmeter in parallel and ammeter in series in the circuit"
+                 "during the experiment?"):
     st.write("""
             - The voltmeter measures the potential difference across the resistor. 
             - It must be connected in parallel so it measures the voltage drop across the resistor without affecting the
@@ -104,10 +103,8 @@ with st.expander("""**2. Question:**
             the resistor. 
             - Ammeters have very low resistance to avoid altering the circuit's current.""")
 
-with st.expander("""**3. Question:**
-                 If a student plots a graph of voltage V versus current I for a resistor and observes a curve
-                 instead of a straight line, what might be the reason?
-                 ?"""):
+with st.expander("Q 3. If a student plots a graph of voltage V versus current I for a resistor and observes a curve"
+                 "instead of a straight line, what might be the reason?"):
     st.write("""
         The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
     
