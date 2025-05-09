@@ -19,10 +19,10 @@ with tabs[0]:
     A_12, A_13 = st.columns(2)
 
     with A_12:
-        if st.button("True", key=A_12):
+        if st.button("True", key=A_12, use_container_width=True):
             st.balloons()
     with A_13:
-        if st.button("False", key=A_13):
+        if st.button("False", key=A_13, use_container_width=True):
             st.write("Try Again")
 
     """
@@ -33,10 +33,10 @@ with tabs[0]:
     A_2, A_3 = st.columns(2)
 
     with A_2:
-        if st.button("True", key=A_2):
+        if st.button("True", key=A_2, use_container_width=True):
             st.balloons()
     with A_3:
-        if st.button("False", key=A_3):
+        if st.button("False", key=A_3, use_container_width=True):
             st.write("Try Again")
 
     """
@@ -48,10 +48,10 @@ with tabs[0]:
     A_14, A_15 = st.columns(2)
 
     with A_14:
-        if st.button("True", key=A_14):
+        if st.button("True", key=A_14, use_container_width=True):
             st.warning("Try Again")
     with A_15:
-        if st.button("False", key=A_15):
+        if st.button("False", key=A_15, use_container_width=True):
             st.success("✔️")
     """
     5. Water falling from a 50 m high fall is used for generating electrical energy. If 1.8 * 10^5 kg of water falls per
@@ -64,10 +64,10 @@ with tabs[0]:
     A_4, A_5 = st.columns(2)
 
     with A_4:
-        if st.button("True", key=A_4):
+        if st.button("True", key=A_4, use_container_width=True):
             st.balloons()
     with A_5:
-        if st.button("False", key=A_5):
+        if st.button("False", key=A_5, use_container_width=True):
             st.write("Try Again")
 
     """
@@ -78,10 +78,10 @@ with tabs[0]:
     A_6, A_7 = st.columns(2)
 
     with A_6:
-        if st.button("True", key=A_6):
+        if st.button("True", key=A_6, use_container_width=True):
             st.write("Try Again")
     with A_7:
-        if st.button("False", key=A_7):
+        if st.button("False", key=A_7, use_container_width=True):
             st.balloons()
 
     """
@@ -94,17 +94,29 @@ with tabs[0]:
     A_8, A_9 = st.columns(2)
 
     with A_8:
-        if st.button("True", key=A_8):
+        if st.button("True", key=A_8, use_container_width=True):
             st.balloons()
     with A_9:
-        if st.button("False", key=A_9):
+        if st.button("False", key=A_9, use_container_width=True):
             st.write("Try Again")
 
     """
-    10. By Newton`s Formula the speed of sound at one atmospheric pressure is nearly 280 m/s. CP/CV for air is 7/4. The 
+    10. The length of a pipe is l = 85 cm. The speed of sound is 340 m/s. When the pipe is open at both ends the 2nd harmonic
+     frequency is 2 * A10 Hz and the third harmonic frequency is 3 * A12 Hz. True / False.
+    """
+    A_16, A_17 = st.columns(2)
+
+    with A_16:
+        if st.button("True", key=A_14, use_container_width=True):
+            st.success("✔️")
+    with A_17:
+        if st.button("False", key=A_15, use_container_width=True):
+            st.warning("✔️")
+    """
+    11. By Newton`s Formula the speed of sound at one atmospheric pressure is nearly 280 m/s. CP/CV for air is 7/4. The 
     actual speed of sound in air is nearly A13 m/s.
     
-    11. The amount of energy which flows perpendicular to a plane per unit area per unit time in a wave is proportional to 
+    12. The amount of energy which flows perpendicular to a plane per unit area per unit time in a wave is proportional to 
     A14 power of frequency of the wave and A15 power of the amplitude of displacement of particle of the wave.
          
     12. A wave is travelling along the X-axis. The disturbance at x = 0 and t = 0 is A/2 and is increasing, where A is 
@@ -114,73 +126,73 @@ with tabs[0]:
     A_10, A_11 = st.columns(2)
 
     with A_10:
-        if st.button("True", key=A_10):
+        if st.button("True", key=A_10, use_container_width=True):
             st.balloons()
     with A_11:
-        if st.button("False", key=A_11):
+        if st.button("False", key=A_11, use_container_width=True):
             st.write("Try Again")
 
     A1, A2, A3, A4, A5, A6, A7, A8 = st.columns(8)
     A9, A10, A11, A12, A13, A14, A15 = st.columns(7)
 
     with A1:
-        with st.popover("A1"):
+        with st.popover("A1", use_container_width=True):
             st.write("-1")
 
     with A2:
-        with st.popover("A2"):
+        with st.popover("A2", use_container_width=True):
             st.write("3")
 
     with A3:
-        with st.popover("A3"):
+        with st.popover("A3", use_container_width=True):
             st.write("-2")
 
     with A4:
-        with st.popover("A4"):
+        with st.popover("A4", use_container_width=True):
             st.write("1")
 
     with A5:
-        with st.popover("A5"):
+        with st.popover("A5", use_container_width=True):
             st.write("1")
 
     with A6:
-        with st.popover("A6"):
+        with st.popover("A6", use_container_width=True):
             st.write("-3")
 
     with A7:
-        with st.popover("A7"):
+        with st.popover("A7", use_container_width=True):
             st.write("-1")
 
     with A8:
-        with st.popover("A8"):
+        with st.popover("A8", use_container_width=True):
             st.write("122")
 
     with A9:
-        with st.popover("A9"):
+        with st.popover("A9", use_container_width=True):
             st.write("4")
 
     with A10:
-        with st.popover("A10"):
+        with st.popover("A10", use_container_width=True):
             st.write("200")
 
     with A11:
-        with st.popover("A11"):
+        with st.popover("A11", use_container_width=True):
             st.write("20")
 
     with A12:
-        with st.popover("A12"):
+        with st.popover("A12", use_container_width=True):
             st.write("100")
 
     with A13:
-        with st.popover("A13"):
+        with st.popover("A13", use_container_width=True):
             st.write("370")
 
     with A14:
-        with st.popover("A14"):
+        with st.popover("A14", use_container_width=True):
             st.write("2")
 
     with A15:
-        with st.popover("A15"):
+        with st.popover("A15", use_container_width=True):
             st.write("2")
 
 with tabs[1]:
@@ -205,19 +217,19 @@ with tabs[1]:
     B1, B2, B3, B4 = st.columns(4)
 
     with B1:
-        with st.popover("B1"):
+        with st.popover("B1", use_container_width=True):
             st.write("3")
 
     with B2:
-        with st.popover("B2"):
+        with st.popover("B2", use_container_width=True):
             st.write("20 π")
 
     with B3:
-        with st.popover("B3"):
+        with st.popover("B3", use_container_width=True):
             st.write("56")
 
     with B4:
-        with st.popover("B4"):
+        with st.popover("B4", use_container_width=True):
             st.write("2501")
 
 with tabs[2]:
@@ -234,28 +246,25 @@ with tabs[2]:
     
     4. In a sono-meter, l1 and l2 are two successive resonance lengths. N0 is the frequency of oscillating sources. 
     The wave velocity is C3 * n0 * (l2 - l1). (l2 > l1)
-    
-    5. The length of a pipe is l = 85 cm. The speed of sound is 340 m/s. When the pipe is open at both ends the 2nd harmonic
-     frequency is 2 * A10 Hz and the third harmonic frequency is 3 * A12 Hz. True / False.
-    
-    6. In the previous question, the sqrt (B4)th harmonic is C4 * 100 hz in an open pipe. The sqrt (B4)th harmonic does not 
+         
+    5. In the previous question, the sqrt (B4)th harmonic is C4 * 100 hz in an open pipe. The sqrt (B4)th harmonic does not 
     exist for a closed pipe. True / False.
     
-    7. An open pipe 40 cm long and a closed pipe 31 cm long, both having the same diameter, are producing their first 
+    6. An open pipe 40 cm long and a closed pipe 31 cm long, both having the same diameter, are producing their first 
     overtone, and they are in unison. The end correction of these pipes is C3 cm. True / False."""
 
     C1, C2, C3 = st.columns(3)
 
     with C1:
-        with st.popover("C1"):
+        with st.popover("C1", use_container_width=True):
             st.write("4")
 
     with C2:
-        with st.popover("C2"):
+        with st.popover("C2", use_container_width=True):
             st.write("1")
 
     with C3:
-        with st.popover("C3"):
+        with st.popover("C3", use_container_width=True):
             st.write("2")
 
     # sentiment_mapping = [0, 1]
