@@ -10,7 +10,7 @@ tabs = st.tabs(['Section A', 'Section B', 'Section C'])
 with tabs[0]:
     """
     1. The dimensional formulae of the universal constant of gravitation G is M^A1 L^A2 T^A3 and that of the thermal 
-    conductivity k is M^A4 L^A5 T^A6 K^A7. 
+    conductivity k is M^A4 L^A5 T^A6 K^A7.
     
     2. A travelling wave is given by  Y = 0.8 / (3x^2 + 24xt + 48t^2 + 4)  where x and y are in metres and t is in second. 
     The wave speed is (A3)^2.
@@ -82,7 +82,7 @@ with tabs[0]:
             st.write("Try Again")
     with A_7:
         if st.button("False", key=A_7, use_container_width=True):
-            st.balloons()
+            st.success("✔️")
 
     """
     8. Equation of a transverse wave travelling in a rope is given by y = 4 sin (5.0 t - 0.01 x), where y and x are 
@@ -95,7 +95,7 @@ with tabs[0]:
 
     with A_8:
         if st.button("True", key=A_8, use_container_width=True):
-            st.balloons()
+            st.success("✔️")
     with A_9:
         if st.button("False", key=A_9, use_container_width=True):
             st.write("Try Again")
@@ -111,7 +111,7 @@ with tabs[0]:
             st.success("✔️")
     with A_17:
         if st.button("False", key=A_15, use_container_width=True):
-            st.warning("✔️")
+            st.warning("Try Again")
     """
     11. By Newton`s Formula the speed of sound at one atmospheric pressure is nearly 280 m/s. CP/CV for air is 7/4. The 
     actual speed of sound in air is nearly A13 m/s.
