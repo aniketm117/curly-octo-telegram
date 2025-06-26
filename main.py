@@ -1,8 +1,8 @@
 import streamlit as st
 
 # Page title
-st.set_page_config(page_title='Productivity App', page_icon='📚')
-st.title('📚 Productivity App')
+st.set_page_config(page_title='Physics App', page_icon='📚')
+st.title('📚 Physics App')
 
 # audio_file = open("audio/Spotify.mp3", "rb")
 # audio_bytes = audio_file.read()
