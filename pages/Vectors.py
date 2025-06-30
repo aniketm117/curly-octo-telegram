@@ -13,7 +13,7 @@ When applying a force, we are concerned with both the magnitude and direction of
  In both of these examples, direction is important. Because of this, we study vectors,
   mathematical objects that convey both magnitude and direction information."""
 
-st.write("A vector is a physical quantity with magnitude and direction parameters, and which follows "
+st.info("A vector is a physical quantity with magnitude and direction parameters, and which follows "
         "triangle rule of vector addition")
 
 with st.expander("Q 1.	At what angle three forces of equal magnitude may act so that their"

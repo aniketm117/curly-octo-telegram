@@ -15,12 +15,12 @@ where:
 - R : Resistance of the resistor (in ohms)  
 """
 
-tabs = st.tabs(['Apparatus Needed','Circuit Scheme','Procedure',
-                'Expected Result','Graphical Verification'])
+tabs = st.tabs(['Apparatus Needed', 'Circuit Scheme', 'Procedure',
+                'Expected Result', 'Graphical Verification'])
 
 with tabs[0]:
     """
-    1. **Power supply:** Provides a range of voltages (e.g., DC power supply or batteries).
+    1. **Power supply:** Provides a range of voltages (e.g., Cells or batteries).
     2. **Resistor:** Known resistance value R.
     3. **Voltmeter:** Measures the voltage across the resistor.
     4. **Ammeter:** Measures the current through the resistor.
@@ -30,7 +30,7 @@ with tabs[0]:
     """
 with tabs[1]:
     """
-    - Connect the resistor R in series with the ammeter and power supply.
+    - Connect the resistor R in series with the ammeter and battery.
     - The voltmeter is connected in parallel across the resistor to measure the potential difference.
     """
 
@@ -69,29 +69,7 @@ with tabs[4]:
 
 # Questions and Answers
 
-with st.expander("""Q 1. In an experiment to verify Ohm’s Law, a student sets up a circuit with a resistor 
-            of 10 ohm. The student measures a current of i = [1, 2, 3, 4, 5, 6] when the applied voltage is V = [0.1, 0.
-            2, 0.3, 0.4, 0.5, 0.6] respectively. Does this confirm Ohms Law? Show the calculation."""):
-
-    st.write("""    
-        Ohm's Law states
-            
-        V = I * R
-        
-        From the given data:
-        
-        I = [1, 2, 3, 4, 5, 6] , 
-        
-        V = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6] , R = ?
-        
-        Calculate R:
-        
-        R = {V}/{I} = 10
-                    
-        The calculated resistance matches the resistor's given value 10ohm. Thus, the results confirm Ohm's Law.
-            """)
-
-with st.expander("Q 2. Why is it important to connect the voltmeter in parallel and ammeter in series in the circuit"
+with st.expander("Q 1. Why is it important to connect the voltmeter in parallel and ammeter in series in the circuit"
                  "during the experiment?"):
     st.write("""
             - The voltmeter measures the potential difference across the resistor. 
@@ -103,7 +81,7 @@ with st.expander("Q 2. Why is it important to connect the voltmeter in parallel 
             the resistor. 
             - Ammeters have very low resistance to avoid altering the circuit's current.""")
 
-with st.expander("Q 3. If a student plots a graph of voltage V versus current I for a resistor and observes a curve"
+with st.expander("Q 2. If a student plots a graph of voltage V versus current I for a resistor and observes a curve"
                  "instead of a straight line, what might be the reason?"):
     st.write("""
         The curve indicates that Ohm’s Law is not being followed. Possible reasons include:
