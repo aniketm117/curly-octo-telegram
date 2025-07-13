@@ -91,17 +91,6 @@ with tabs[0]:
 
     A1, A2, A3 = st.columns(3)
 
-    with A1:
-        with st.popover("A1", use_container_width=True):
-            st.write("370")
-
-    with A2:
-        with st.popover("A2", use_container_width=True):
-            st.write("2")
-
-    with A3:
-        with st.popover("A3", use_container_width=True):
-            st.write("2")
 
 with tabs[1]:
     ""

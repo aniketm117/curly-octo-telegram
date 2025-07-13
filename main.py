@@ -36,11 +36,7 @@ with clmn4:
                  use_container_width=True)
 
 with clmn5:
-    st.page_link("pages/Tickets.py",
-                 label="Tickets",
+    st.page_link("pages/Kinematics.py",
+                 label="Kinematics",
                  icon="🏀",
                  use_container_width=True)
-
-st.success("I have a friend who’s a fisherman. He says, ‘I have a simple rule for success in fishing. Fish where the"
-           " fish are.’ You want to fish where the doable questions are. That simple. If the fishing is really lousy "
-           "where you are you should probably look for another place to fish.")
