@@ -16,13 +16,13 @@ with tabs[0]:
     The wave speed is (A3)^2.
     """
 
-    A_12, A_13 = st.columns(2)
+    A_1, A_2 = st.columns(2)
 
-    with A_12:
-        if st.button("True", key=A_12, use_container_width=True):
+    with A_1:
+        if st.button("True", key=A_1, use_container_width=True):
             st.balloons()
-    with A_13:
-        if st.button("False", key=A_13, use_container_width=True):
+    with A_2:
+        if st.button("False", key=A_2, use_container_width=True):
             st.write("Try Again")
 
     """
@@ -30,13 +30,13 @@ with tabs[0]:
     outside the first body is G m1 m2 r^A3, where r is the distance between the centers of the two bodies.
     """
 
-    A_2, A_3 = st.columns(2)
+    A_3, A_4 = st.columns(2)
 
-    with A_2:
-        if st.button("True", key=A_2, use_container_width=True):
-            st.balloons()
     with A_3:
-        if st.button("False", key=A_3, use_container_width=True):
+        if st.button("True", key=A_3, use_container_width=True):
+            st.balloons()
+    with A_4:
+        if st.button("False", key=A_4, use_container_width=True):
             st.write("Try Again")
 
     """
@@ -45,13 +45,13 @@ with tabs[0]:
     increased by 20 %, keeping the original tension in the wire constant.
     """
 
-    A_14, A_15 = st.columns(2)
+    A_5, A_6 = st.columns(2)
 
-    with A_14:
-        if st.button("True", key=A_14, use_container_width=True):
+    with A_5:
+        if st.button("True", key=A_5, use_container_width=True):
             st.warning("Try Again")
-    with A_15:
-        if st.button("False", key=A_15, use_container_width=True):
+    with A_6:
+        if st.button("False", key=A_6, use_container_width=True):
             st.success("✔️")
     """
     5. Water falling from a 50 m high fall is used for generating electrical energy. If 1.8 * 10^5 kg of water falls per
@@ -61,13 +61,13 @@ with tabs[0]:
     6. The square of the time period of a planet is proportional to the A2 power of the semi-major axis of the ellipse.
     """
 
-    A_4, A_5 = st.columns(2)
+    A_7, A_8 = st.columns(2)
 
-    with A_4:
-        if st.button("True", key=A_4, use_container_width=True):
+    with A_7:
+        if st.button("True", key=A_7, use_container_width=True):
             st.balloons()
-    with A_5:
-        if st.button("False", key=A_5, use_container_width=True):
+    with A_8:
+        if st.button("False", key=A_8, use_container_width=True):
             st.write("Try Again")
 
     """
@@ -75,13 +75,13 @@ with tabs[0]:
     v^2 = T * m^A4.
     """
 
-    A_6, A_7 = st.columns(2)
+    A_9, A_10 = st.columns(2)
 
-    with A_6:
-        if st.button("True", key=A_6, use_container_width=True):
+    with A_9:
+        if st.button("True", key=A_9, use_container_width=True):
             st.write("Try Again")
-    with A_7:
-        if st.button("False", key=A_7, use_container_width=True):
+    with A_10:
+        if st.button("False", key=A_10, use_container_width=True):
             st.success("✔️")
 
     """
@@ -91,26 +91,26 @@ with tabs[0]:
     
     9. A fluid has bulk modulus of 4 * 10^9 Pa and density 10^3 kg/m3. The speed of sound in that fluid is 10 * (A10) m/s.
     """
-    A_8, A_9 = st.columns(2)
+    A_11, A_12 = st.columns(2)
 
-    with A_8:
-        if st.button("True", key=A_8, use_container_width=True):
+    with A_11:
+        if st.button("True", key=A_11, use_container_width=True):
             st.success("✔️")
-    with A_9:
-        if st.button("False", key=A_9, use_container_width=True):
+    with A_12:
+        if st.button("False", key=A_12, use_container_width=True):
             st.write("Try Again")
 
     """
     10. The length of a pipe is l = 85 cm. The speed of sound is 340 m/s. When the pipe is open at both ends the 2nd harmonic
      frequency is 2 * A10 Hz and the third harmonic frequency is 3 * A12 Hz. True / False.
     """
-    A_16, A_17 = st.columns(2)
+    A_13, A_14 = st.columns(2)
 
-    with A_16:
-        if st.button("True", key=A_14, use_container_width=True):
+    with A_13:
+        if st.button("True", key=A_13, use_container_width=True):
             st.success("✔️")
-    with A_17:
-        if st.button("False", key=A_15, use_container_width=True):
+    with A_14:
+        if st.button("False", key=A_14, use_container_width=True):
             st.warning("Try Again")
     """
     11. By Newton`s Formula the speed of sound at one atmospheric pressure is nearly 280 m/s. CP/CV for air is 7/4. The 
@@ -123,13 +123,13 @@ with tabs[0]:
     amplitude of the wave. If y = A sin (kx - wt + φ), the initial phase φ = π / (A9 + A14). True /False.
     """
 
-    A_10, A_11 = st.columns(2)
+    A_15, A_16 = st.columns(2)
 
-    with A_10:
-        if st.button("True", key=A_10, use_container_width=True):
+    with A_15:
+        if st.button("True", key=A_15, use_container_width=True):
             st.balloons()
-    with A_11:
-        if st.button("False", key=A_11, use_container_width=True):
+    with A_16:
+        if st.button("False", key=A_16, use_container_width=True):
             st.write("Try Again")
 
     A1, A2, A3, A4, A5, A6, A7, A8 = st.columns(8)
@@ -203,7 +203,18 @@ with tabs[1]:
     
     2. A planet revolving around a very massive star in a circular orbit of radius R with a period of revolution T. If the 
     gravitational force of attraction between the planet and the star is proportional to R^-2.5, then T is proportional to 
-    7/(1+B1). True / False.
+    7/(1+B1)."""
+
+    B_1, B_2 = st.columns(2)
+
+    with B_1:
+        if st.button("True", key=B_1, use_container_width=True):
+            st.balloons()
+    with B_2:
+        if st.button("False", key=B_2, use_container_width=True):
+            st.write("Try Again")
+
+    """
         
     3. A long string of mass per unit length 0.01 kg/m is subject to a tension of 64 N along the x-axis. One end (x=0) of 
     this string is attached to a vibrator moving in a transverse direction at a frequency of 20 Hz. At t = 0; x = 0, the 
@@ -239,19 +250,60 @@ with tabs[2]:
     At time 3 / C1 second the displacement of all particles will be zero i.e. the two pulses cancel everywhere. Position x =
      C2 metre is a node (permanent).
     
-    2. In the previous Q, Y1 and Y2 pulses travel in the same direction.True / False.
-    
+    2. In the previous Q, Y1 and Y2 pulses travel in the same direction.
+    """
+    C_1, C_2 = st.columns(2)
+
+    with C_1:
+        if st.button("True", key=C_1, use_container_width=True):
+            st.warning("Try Again")
+    with C_2:
+        if st.button("False", key=C_2, use_container_width=True):
+            st.write("Success")
+
+    """
     3. Two waves y1 and y2 superimpose to give the resultant wave, y1 = A sin (kx - wt); y2 = A sin (kx - wt + φ). The 
     resultant of the two waves y1 and y2 has amplitude 2A sin (φ/2). True / False.
-    
+    """
+
+    C_3, C_4 = st.columns(2)
+
+    with C_3:
+        if st.button("True", key=C_3, use_container_width=True):
+            st.warning("Try Again")
+    with C_4:
+        if st.button("False", key=C_4, use_container_width=True):
+            st.write("Success")
+
+    """
     4. In a sono-meter, l1 and l2 are two successive resonance lengths. N0 is the frequency of oscillating sources. 
     The wave velocity is C3 * n0 * (l2 - l1). (l2 > l1)
          
     5. In the previous question, the sqrt (B4)th harmonic is C4 * 100 hz in an open pipe. The sqrt (B4)th harmonic does not 
-    exist for a closed pipe. True / False.
+    exist for a closed pipe.
+    """
+    C_5, C_6 = st.columns(2)
+
+    with C_5:
+        if st.button("True", key=C_5, use_container_width=True):
+            st.write("Success")
+    with C_6:
+        if st.button("False", key=C_6, use_container_width=True):
+            st.warning("Try Again")
+
+    """
     
     6. An open pipe 40 cm long and a closed pipe 31 cm long, both having the same diameter, are producing their first 
     overtone, and they are in unison. The end correction of these pipes is C3 cm. True / False."""
+
+    C_7, C_8 = st.columns(2)
+
+    with C_7:
+        if st.button("True", key=C_7, use_container_width=True):
+            st.write("Success")
+    with C_8:
+        if st.button("False", key=C_8, use_container_width=True):
+            st.warning("Try Again")
 
     C1, C2, C3 = st.columns(3)
 
