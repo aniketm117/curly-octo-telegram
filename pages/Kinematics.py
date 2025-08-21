@@ -6,7 +6,7 @@ tabs = st.tabs(['Section A', 'Section B', 'Section C'])
 
 with tabs[0]:
     """
-    **Diffrentiation**
+    **Differentiation**
     
     The term '\u0394y/\u0394t represented the average velocity of the particle between the time instants x\u2081 and 
     x\u2082. At the instant x\u2081 itself the term becomes dy/dx, which implies we have determined the instantaneous 
