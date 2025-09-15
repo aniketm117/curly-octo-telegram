@@ -8,7 +8,7 @@ with tabs[0]:
     """
     **Differentiation**
     
-    The term '\u0394y/\u0394t represented the average velocity of the particle between the time instants x\u2081 and 
+    The term '\u0394y/\u0394x represented the average velocity of the particle between the time instants x\u2081 and 
     x\u2082. At the instant x\u2081 itself the term becomes dy/dx, which implies we have determined the instantaneous 
     velocity of the particle at that instant. 
     
@@ -98,7 +98,7 @@ with tabs[1]:
 with tabs[2]:
     ""
 
-    # sentiment_mapping = [0, 1]
-    # selected = st.feedback("thumbs")
-    # if selected is not None:
-    #     st.markdown("Thanks for your feedback!")
+sentiment_mapping = [0, 1]
+selected = st.feedback("thumbs")
+if selected is not None:
+    st.markdown("Thanks for your feedback!")

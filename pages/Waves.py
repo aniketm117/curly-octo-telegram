@@ -1,9 +1,8 @@
 import streamlit as st
 
 st.info("🎯 Find the values of distinct variables (A1, A2, A3 etc.) mentioned in various statements, and to"
-        " evaluate true / false questions.")
-
-st.success("🪥 Brush some concepts of Gravitation before proceeding as some Qs on that topic are included.")
+        " evaluate true / false questions.🪥 Brush some concepts of Gravitation before proceeding as some Q"
+        "s on that topic are included.")
 
 tabs = st.tabs(['Section A', 'Section B', 'Section C'])
 
@@ -318,8 +317,3 @@ with tabs[0]:
 #     with C3:
 #         with st.popover("C3", use_container_width=True):
 #             st.write("2")
-
-    # sentiment_mapping = [0, 1]
-    # selected = st.feedback("thumbs")
-    # if selected is not None:
-    #     st.markdown("Thanks for your feedback!")
