@@ -10,27 +10,34 @@ with tabs[0]:
       
     Natural and Imaginary world is full of amazing phenomena. The concepts which we are going to learn can be applied in
     
+    - Prediction of trajectory of a Space X Rocket successfully returning to Earth
+    
     """
 
     st.page_link("https://www.youtube.com/watch?v=lEr9cPpuAx8",
-                 label="Prediction of trajectory of a Space X Rocket successfully returning to Earth ",
-                 use_container_width=True
-                 )
-
-    st.page_link("https://youtu.be/JagzNA2oG20",
-                 label="Estimation of maximum velocity of water particles arising from geyser shooting periodically",
+                 label="Space X Rocket",
                  use_container_width=True
                  )
 
     """
+    - Estimation of maximum velocity of water particles arising from geyser shooting periodically
     
+    """
+
+    st.page_link("https://youtu.be/JagzNA2oG20",
+                 label="Geyser shooting up in Iceland",
+                 use_container_width=True
+                 )
+
+    """
     Prerequisites for the lesson: If you are beginner in **vectors** you can jump ahead, otherwise you
-    can watch my lecture on vectors linked below.
+    can watch my lecture on vectors linked below. Watch the lecture on 1.5X speed as I construct ideas rather slowly.
     
     """
 
     st.page_link("https://www.youtube.com/playlist?list=PLW8MJVksa5J_ZVghf9v7eB-xN_dUgzVcj",
-                 label="Watch the lecture on 1.5X speed as I construct ideas rather slowly."
+                 label="Vectors Playlist",
+                 use_container_width=True
                  )
 
     """
