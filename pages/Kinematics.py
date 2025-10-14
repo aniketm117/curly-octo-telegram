@@ -8,155 +8,126 @@ with tabs[0]:
     """
     ## Intro to Kinematics
       
-    Natural and Imaginary world is full of amazing phenomena. The concepts which we are going to learn can be applied in
+        Natural and Imaginary world is full of amazing phenomena. The concepts which we are going to learn can be applied in
+        
+        - Prediction of trajectory of a Space X Rocket successfully returning to Earth
     
-    - Prediction of trajectory of a Space X Rocket successfully returning to Earth
+    [Space X Rocket](https://www.youtube.com/watch?v=lEr9cPpuAx8)
     
-    """
-
-    st.page_link("https://www.youtube.com/watch?v=lEr9cPpuAx8",
-                 label="Space X Rocket",
-                 use_container_width=True
-                 )
-
-    """
-    - Estimation of maximum velocity of water particles arising from geyser shooting periodically
+        - Estimation of maximum velocity of water particles arising from geyser shooting periodically
+        
+    [Geyser shooting up in Iceland](https://youtu.be/JagzNA2oG20)
     
-    """
-
-    st.page_link("https://youtu.be/JagzNA2oG20",
-                 label="Geyser shooting up in Iceland",
-                 use_container_width=True
-                 )
-
-    """
-    Prerequisites for the lesson: If you are beginner in **vectors** you can jump ahead, otherwise you
-    can watch my lecture on vectors linked below. Watch the lecture on 1.5X speed as I construct ideas rather slowly.
+        Prerequisites for the lesson: If you are beginner in **vectors** you can jump ahead, otherwise you
+        can watch my lecture on vectors linked below. Watch the lecture on 1.5X speed as I construct ideas rather slowly.
+        
+    [Vectors Playlist]("https://www.youtube.com/playlist?list=PLW8MJVksa5J_ZVghf9v7eB-xN_dUgzVcj)
     
-    """
-
-    st.page_link("https://www.youtube.com/playlist?list=PLW8MJVksa5J_ZVghf9v7eB-xN_dUgzVcj",
-                 label="Vectors Playlist",
-                 use_container_width=True
-                 )
-
-    """
     ### Frame of Reference
     
-    A frame of reference is a set of three mutually perpendicular axes which intersect at origin (named O), alongwith a clock to measure time. For Competitive examinations or Boards, we commonly use the same coordinate system which you might have studied in Class X. The frame of refrence can be attatched to a particle or to a rigid body or fixed in space and therefore provide an "absolute" point of view when studying motion of other objects.
-    """
-
-    st.image("https://i.ibb.co/CQfRd7r/coordinate-system.jpg")
-
-    """
-      
+        - A frame of reference is a set of three mutually perpendicular axes which intersect at origin (named O), 
+        along with a clock to measure time. 
+        
+        - For Competitive examinations or Boards, we commonly use the same coordinate system which you might have 
+        studied in Class X. 
+        
+        - The frame of reference can be attached to a particle or to a rigid body or fixed in space 
+        and therefore provide an "absolute" point of view when studying motion of other objects.
+        
+    ![coordinate system](https://i.ibb.co/CQfRd7r/coordinate-system.jpg "coordinate-system")
+        
     #### Position
     
-    The coordinates of the particle (x,y,z) relative to the origin (O) is the position of the particle. The values x, y 
-    and z represent the distance to be moved from the origin along the respective axis to reach the particle. For 
-    example, (2,3,9) m represents the particle can be found by moving 2m along x axis, 3m along y axis, and 9m along z 
-    axis, in no particular order (i.e. any order). Position of a particle can be represented as **a vector**, where if (
-    x,y,z) is the position of the particle then the corresponding vector is,
+        - The coordinates of the particle (x,y,z) relative to the origin (O) is the position of the particle.
+     
+        - The values x, y and z represent the distance to be moved from the origin along the respective axis to reach the 
+          particle. For example, (2,3,9) m represents the particle can be found by moving 2m along x axis, 3m along y axis, and 9m along z 
+          axis, in no particular order (i.e. any order). 
     
-    """
-
-    st.image("https://i.ibb.co/sKFzGwk/position.jpg")
-
-    """
-    For example the position vector or (simply) the position of an imaginary star at (2,3,9)ly (ly=light year) as seen
-    by the Sun is,
-    """
+        - Position of a particle can be represented as **a vector**, where if (x,y,z) is the position of the particle then the corresponding vector is,
     
-    st.image("https://i.ibb.co/j5Cz9z8/pos1.jpg")
+    ![position](https://i.ibb.co/sKFzGwk/position.jpg "position")
+    
+        Say the position vector or (simply) the position of an imaginary star at (2,3,9)ly (ly=light year) as seen
+        by the Sun is,
+        
+    ![pos1](https://i.ibb.co/j5Cz9z8/pos1.jpg "pos1")
+    
+        The Position of a particle moving on a straight line can be represented by x, where x > 0 represents the particle 
+        existing on the positive side and x < 0 represents the particle existing on the negative side of the origin ( x = 0 
+        ).
+        
+    ![Star_Wars](https://i.ibb.co/2Pvr87S/Star-Wars.jpg "Star_Wars")
 
-    """
-    The Position of a particle moving on a straight line can be represented by x, where x > 0 represents the particle 
-    existing on the positive side and x < 0 represents the particle existing on the negative side of the origin ( x = 0 
-    ). 
-    """
+        The position of the particle can be a "function" of time, which is a fancy (or mathematical) way of saying that the position of the particle depends on / varies with time.
+    
+    ![pos2](https://i.ibb.co/sCZs74r/pos2.jpg "pos2")
+    
+        In the above equation, if we use t=1 then we will get the position of the particle at that time.
+    
+    ![pos3](https://i.ibb.co/bm6MySh/pos3.jpg "pos3")
+    
+        - We can substitute any other value of t to get the the corresponding position of the particle. 
+        
+        - Try to find the time at which the particle whose position is given below crosses origin.
+    
 
-    st.image("https://i.ibb.co/2Pvr87S/Star-Wars.jpg")
+    ![Q1](https://i.ibb.co/8cThJy8/Q1.jpg "Q1")
+    
+        - Using guesswork, we can say that the particle would cross the origin at t=1. Perhaps their is some other way to do 
+        this exercise without just guessing. 
+    
 
-    """
-    The position of the particle can be a "function" of time, which is a fancy (or mathematical) way of saying that the position of the particle depends on / varies with time.
-    """
-
-    st.image("https://i.ibb.co/sCZs74r/pos2.jpg")
-
-    """
-    In the above equation, if we use t=1 then we will get the position of the particle at that time.
-    """
-
-    st.image("https://i.ibb.co/bm6MySh/pos3.jpg")
-
-    """
-    we can substitute any other value of t to get the the corresponding position of the particle. Try to find the time 
-    at which the particle whose position is given below crosses origin.
-    """
-
-    st.image("https://i.ibb.co/8cThJy8/Q1.jpg")
-    """
-    Using guesswork, we can say that the particle would cross the origin at t=1. Perhaps their is some other way to do 
-    this exercise without just guessing. 
-    """
-
-    st.image("https://i.ibb.co/gRhBckS/A1.jpg")
-    """
-    Next, try to find the time at which the particle whose position is given below <i>crosses origin</i>.
-    """
-
-    st.image("https://i.ibb.co/Fm4sWRV/Q2.jpg")
-    """
-    At first we observe that the unit vectors in the expression are not grouped. So the first step should be to group them to reach an intermediate stage. 
-    """
-
-    st.image("https://i.ibb.co/8NVYfh6/A2.jpg")
-    """
-    Now each expression within the bracket can be equated with the corresponding coordinate to get the time(s) at which the value of expression would be equal to the coordinate.
-    """
-
-    st.image("https://i.ibb.co/cgTyK3t/A2A.jpg")
-    """
-    We can see that even though the motion of the particle is not easy to imagine we can find the time at which the particle can reach a certain position, if at all.
+    ![A1](https://i.ibb.co/gRhBckS/A1.jpg "A1")
+    
+        - Next, try to find the time at which the particle whose position is given below <i>crosses origin</i>.
+    
+    ![Q2](https://i.ibb.co/Fm4sWRV/Q2.jpg "Q2")
+        
+        - At first we observe that the unit vectors in the expression are not grouped. So the first step should be to group them to reach an intermediate stage. 
+    
+    ![A2](https://i.ibb.co/8NVYfh6/A2.jpg "A2")
+    
+        - Now each expression within the bracket can be equated with the corresponding coordinate to get the time(s) at which the value of expression would be equal to the coordinate.
+    
+    ![A2A](https://i.ibb.co/cgTyK3t/A2A.jpg "A2A")
+    
+        - We can see that even though the motion of the particle is not easy to imagine we can find the time at which the particle can reach a certain position, if at all.
     
     ## Distance
     
-    The total path length of the path traversed by a particle in going from initial to final position is called the Distance covered by the particle.
+        - The total path length of the path traversed by a particle in going from initial to final position is called the Distance covered by the particle.
+        
+        - Find the distance covered by the particle in going from P to Q along the circle. And, find the distance covered by the particle by the particle in going from P to Q along the diameter.
     
-    Find the distance covered by the particle in going from P to Q along the circle. And, find the distance covered by the particle by the particle in going from P to Q along the diameter.
-    """
-
-    st.image("https://i.ibb.co/37JH3qT/Q3.jpg")
-    """
-    
+    ![Q3](https://i.ibb.co/37JH3qT/Q3.jpg "Q3")
+        
     ## Displacement
     
-    Displacement of a particle is defined as <i>the shortest distance</i> between initial and final position, alongwith a direction from the initial to final position. Displacement of a particle in going from initial to final position is <i>independent</i> of the path taken, which is beacuse of the way it is defined. In the example drawn below a particle goes from r1 to r2, and the displacement is equal to r2 - r1. 
-    """
-
-    st.image("https://i.ibb.co/h79Zj8t/Disp.jpg")
-    """
-    For example, if the position of a particle is x = 2t unit, where t is time (in second) then the displacement of the particle between 2s and 4s is x(final) - x(initial) = 2 * 4 - 2 * 2 = 4 unit. Akin to position, displacement of a particle moving in straight line can be either positive or negetive. Generalization of displacement in two dimensions,
-    """
-
-    st.image("https://i.ibb.co/8rNxXKC/Disp2.jpg")
-    """
-    Take an example,
-    """
-    st.image("https://i.ibb.co/Y8QyB87/Disp3.jpg")
-    """
-    The displacement of a particle is made up of two components, the magnitude and the direction. The direction of the
-     displacement could simply be something like North, 30° East of South etc., or it can be represented as follows,
-    """
-    st.image("https://i.ibb.co/2KZTj05/Direction.jpg")
-    """
+        - Displacement of a particle is defined as <i>the shortest distance</i> between initial and final position, alongwith a direction from the initial to final position. Displacement of a particle in going from initial to final position is <i>independent</i> of the path taken, which is beacuse of the way it is defined. In the example drawn below a particle goes from r1 to r2, and the displacement is equal to r2 - r1. 
+    
+    ![Disp](https://i.ibb.co/h79Zj8t/Disp.jpg "Disp")
+    
+        -  For example, if the position of a particle is x = 2t unit, where t is time (in second) then the displacement of the particle between 2s and 4s is x(final) - x(initial) = 2 * 4 - 2 * 2 = 4 unit. Akin to position, displacement of a particle moving in straight line can be either positive or negetive. Generalization of displacement in two dimensions,
+    
+    ![Disp2](https://i.ibb.co/8rNxXKC/Disp2.jpg "Disp2")
+    
+        Take an example,
+    
+    ![Disp3](https://i.ibb.co/Y8QyB87/Disp3.jpg "Disp3")
+    
+        The displacement of a particle is made up of two components, the magnitude and the direction. The direction of the
+         displacement could simply be something like North, 30° East of South etc., or it can be represented as follows,
+        
+    ![Direction](https://i.ibb.co/2KZTj05/Direction.jpg "Direction")
+    
     #### A twist in subjective IIT-JEE Question
     
-    Find the ratio of the magnitude of the displacement and the distance covered by the particle as it goes along the
-     path ABC from A to C.
+        Find the ratio of the magnitude of the displacement and the distance covered by the particle as it goes along the
+         path ABC from A to C.
+        
+    ![Q4](https://i.ibb.co/x60vLGT/Q4.jpg "Q4")
     """
-    st.image("https://i.ibb.co/x60vLGT/Q4.jpg")
-    
     st.page_link("https://aniketm117.github.io/github-pages-with-jekyll/2023/02/09/long-time-no-post.html",
                  label="Is this a Question of Kinematics ?"
                  )
@@ -165,14 +136,17 @@ with tabs[1]:
     """  
     ## Differentiation
 
-    '\u0394y' represents the position of a particle at an instant then the term '\u0394y/\u0394x' represents the average 
-    velocity of the particle om the time interval \u0394x. Time interval \u0394x = x\u2082 - x\u2081.
-    In the limiting case x\u2081 and x\u2082 are infinitesimally close to each other '\u0394y/\u0394x' becomes dy/dx,
-    which implies we have determined the instantaneous velocity of the particle at an instant.
-
-    Refer to section A for an explainer on displacement of a particle.
-
-    dy/dx refers to differentiation of y wrt x or derivative of y wrt x.
+        - '\u0394y' represents the position of a particle at an instant then the term '\u0394y/\u0394x' represents the average 
+        velocity of the particle om the time interval \u0394x. 
+        
+        - Time interval \u0394x = x\u2082 - x\u2081.
+        
+        - In the limiting case x\u2081 and x\u2082 are infinitesimally close to each other '\u0394y/\u0394x' becomes dy/dx,
+        which implies we have determined the instantaneous velocity of the particle at an instant.
+    
+        - Refer to section A for an explainer on displacement of a particle.
+    
+        - dy/dx refers to differentiation of y wrt x or derivative of y wrt x.
 
     Q1. d(x)/dx =  
     """

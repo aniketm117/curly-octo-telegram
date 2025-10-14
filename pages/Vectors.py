@@ -2,12 +2,14 @@ import streamlit as st
 
 # Vectors
 
-"""## Vectors
+"""
+    ## Vectors
 
-Many quantities we think about daily can be described by a single number: temperature, speed
-, mass, weight and height. There are also many other concepts we encounter daily that cannot be
- described with just one number. For instance, a weather forecaster often describes wind with
-  its speed and its direction.
+        - Many quantities we think about daily can be described by a single number: temperature, speed, mass, weight and
+         height. 
+        
+        - There are also many other concepts we encounter daily that cannot be described with just one number. For 
+        instance, a weather forecaster often describes wind with its speed and its direction.
 """
 
 st.info("When applying a force, we are concerned with both the magnitude and direction of that force."

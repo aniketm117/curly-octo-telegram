@@ -3,16 +3,16 @@ import streamlit as st
 # Current Electricity
 
 """
-### **Experimental Setup to Verify Ohm's Law**
+## Experimental Setup to Verify Ohm's Law   
 
-**Ohm's Law** is a fundamental principle in electrical circuits that states:
-
-V = I * R
-
-where:  
-- V : Voltage across the resistor (in volts, V)  
-- I : Current flowing through the resistor (in amperes, A)  
-- R : Resistance of the resistor (in ohms)  
+    Ohm's Law is a fundamental principle in electrical circuits that states:
+    
+        V = I * R
+        
+        where:  
+        - V : Voltage across the resistor (in volts, V)  
+        - I : Current flowing through the resistor (in amperes, A)  
+        - R : Resistance of the resistor (in ohms)  
 """
 
 tabs = st.tabs(['Apparatus Needed', 'Circuit Scheme', 'Procedure',
@@ -20,33 +20,33 @@ tabs = st.tabs(['Apparatus Needed', 'Circuit Scheme', 'Procedure',
 
 with tabs[0]:
     """
-    1. **Power supply:** Provides a range of voltages (e.g., Cells or batteries).
-    2. **Resistor:** Known resistance value R.
-    3. **Voltmeter:** Measures the voltage across the resistor.
-    4. **Ammeter:** Measures the current through the resistor.
-    5. **Rheostat (optional):** To vary the current in the circuit.
-    6. **Connecting wires** and **breadboard** (or similar circuit assembly tools).
-    7. **Switch:** To control the flow of current.
+    - **Power supply:** Provides a range of voltages (e.g., Cells or batteries).
+    - **Resistor:** Known resistance value R.
+    - **Voltmeter:** Measures the voltage across the resistor.
+    - **Ammeter:** Measures the current through the resistor.
+    - **Rheostat (optional):** To vary the current in the circuit.
+    - **Connecting wires** and **breadboard** (or similar circuit assembly tools).
+    - **Switch:** To control the flow of current.
     """
 with tabs[1]:
     """
     - Connect the resistor R in series with the ammeter and battery.
-    - The voltmeter is connected in parallel across the resistor to measure the potential difference.
+    - The voltmeter is connected in parallel across the resistor.
     """
 
 with tabs[2]:
     """
-    1. Assemble the circuit as per the scheme.
-    2. Adjust the power supply to provide a known voltage.
-    3. Record the readings of the voltmeter **V** and ammeter **I**.
-    4. Vary the voltage using the power supply or rheostat and repeat the measurements for several values of **V**
+    - Assemble the circuit as per the scheme.
+    - Adjust the power supply to provide a known voltage.
+    - Record the readings of the voltmeter **V** and ammeter **I**.
+    - Vary the voltage using the power supply or rheostat and repeat the measurements for several values of **V**
     and **I**.
-    5. Calculate the resistance **R** for each pair of readings using the formula R = V / I.
+    - Calculate the resistance **R** for each pair of readings using the formula R = V / I.
     """
 
 with tabs[3]:
     """
-    The ratio V / I should remain constant throughout the observations.
+    - The ratio V / I should remain constant throughout the observations.
     """
 with tabs[4]:
     """
