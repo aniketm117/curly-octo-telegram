@@ -1,4 +1,6 @@
 import streamlit as st
+import sympy as sy
+from sympy import symbols as symb
 
 st.info("🎯 All Questions mentioned are Multiple choices Single correct type")
 
@@ -136,7 +138,7 @@ with tabs[1]:
     """  
     ## Differentiation
 
-        - '\u0394y' represents the position of a particle at an instant then the term '\u0394y/\u0394x' represents the average 
+        - '\u0394y' represents the displacement of a particle at an instant then the term '\u0394y/\u0394x' represents the average 
         velocity of the particle om the time interval \u0394x. 
         
         - Time interval \u0394x = x\u2082 - x\u2081.
@@ -147,9 +149,9 @@ with tabs[1]:
         - Refer to section A for an explainer on displacement of a particle.
     
         - dy/dx refers to differentiation of y wrt x or derivative of y wrt x.
-
-    Q1. d(x)/dx =  
+    
     """
+    st.latex("Q1. d(x)/dx =")
 
     A_1, A_2, A_3, A_4 = st.columns(4)
 
@@ -166,9 +168,7 @@ with tabs[1]:
         if st.button("None", key=A_4, use_container_width=True):
             st.warning("Try Again")
 
-    """
-    Q2. d(x\u207F)/dx =
-    """
+    st.latex("Q2. d(x\u207F)/dx =")
 
     A_5, A_6, A_7, A_8 = st.columns(4)
 
@@ -185,9 +185,7 @@ with tabs[1]:
         if st.button("None", key=A_8, use_container_width=True):
             st.warning("Try Again")
 
-    """
-    Q3. d(cos(x))/dx =  
-    """
+    st.latex("Q3. d(cos(x))/dx =")
 
     A_9, A_10, A_11, A_12 = st.columns(4)
 
@@ -204,9 +202,7 @@ with tabs[1]:
         if st.button("cosec ^2 (x)", key=A_12, use_container_width=True):
             st.warning("Try Again")
 
-    """
-    Q4. If 'A' is a constant then, d(sin(A*x))/dx =   
-    """
+    st.latex("Q4. d(sin(A*x))/dx = ")
 
     A_13, A_14, A_15, A_16 = st.columns(4)
 

@@ -8,12 +8,24 @@ tabs = st.tabs(['Section A', 'Section B', 'Section C'])
 
 with tabs[0]:
     """
-    1. The dimensional formulae of the universal constant of gravitation G is M^A1 L^A2 T^A3 and that of the thermal 
-    conductivity k is M^A4 L^A5 T^A6 K^A7.
+    ###### Q1
     
-    2. A travelling wave is given by  Y = 0.8 / (3x^2 + 24xt + 48t^2 + 4)  where x and y are in metres and t is in second. 
-    The wave speed is (A3)^2.
+        - The dimensional formulae of the universal constant of gravitation is G and that of the thermal 
+        conductivity is k.
     """
+
+    st.latex("G = M^α L^β T^γ")
+
+    st.latex("k = M^δ L^ε T^ζ K^η")
+
+    """
+    ###### Q2
+        - A travelling wave is given by the equation below. 'x' and 'y' are in metres and 't' is in second. 
+        The wave speed is γ^2.
+    
+    """
+
+    st.latex("Y = 0.8 / (3x^2 + 24xt + 48t^2 + 4)")
 
     A_1, A_2 = st.columns(2)
 
