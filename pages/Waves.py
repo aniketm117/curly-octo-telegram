@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.info("🎯 Find the values of distinct variables (A1, A2, A3 etc.) mentioned in various statements, and to"
+st.info("🎯 Find the values of distinct variables (α, β, γ etc.) mentioned in various statements, and to"
         " evaluate true / false questions.🪥 Brush some concepts of Gravitation before proceeding as some Q"
         "s on that topic are included.")
 

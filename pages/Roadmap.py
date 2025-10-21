@@ -4,8 +4,8 @@ import streamlit as st
 
 """
     ### Roadmap
-        The pathways one can take to complete their Physics prep for
-        whatever goal one may be aspiring to in XI and XII Class.
+        The pathways one can take to complete their Physics prep for whatever goal one may be aspiring to in XI and XII 
+        Class.
 """
 
 # Create a graphlib graph object
