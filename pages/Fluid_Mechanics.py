@@ -10,22 +10,22 @@ prompt = "Please enter the requisite value"
 ## Fluid Mechanics
 
     One of the first things we observe in a fluid is its density. Will the fluid stay above water or below it when 
-    is brought together with water ? 
+    is brought together with water ?
     
-    Density of a fluid is defined as the ratio of its mass and volume. However they are other ways of defining densities
+    Density of a fluid is defined as the ratio of its mass and volume. However there are other ways of defining densities
     as well like Relative density which tell us whether the fluid is lighter or heavier.
     
     This brings us awareness of the world around us that air is a fluid, lighter than water. Water vapour which 
     compose the clouds are lighter than air.
 """
 
-tabs = st.tabs(['Fluid Statics', 'Streamline & Turbulent Flow', 'Fluid Dynamics',
-                'Surface Tension', 'Viscosity & Terminal Velocity'])
+tabs = st.tabs(['Fluid Statics', 'Streamline & Turbulent Flow', 'Fluid Dynamics', 'Surface Tension',
+                'Viscosity & Terminal Velocity'])
 
 with tabs[0]:
     """
     ## Fluid Statics
-     
+    
         - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
     """
 
@@ -34,14 +34,14 @@ with tabs[0]:
     eq = sy.Eq(expr, expr2)
     st.latex(f"{expr2}={expr}")
 
-    Fluids = {'Mercury': 13600, 'Water': 1000, 'Kerosene Oil': 800, 'Castor Oil': 650, 'Honey': 2000, 'Blood': 890}
+    Fluids = {'Mercury': 13600, 'Water': 1000, 'Kerosene Oil': 800, 'Castor Oil': 915, 'Honey': 1415, 'Blood': 1060}
 
     st.bar_chart(data=Fluids, x_label='Fluids', y_label='Densities')
 
     """
     #### Pressure
         
-        - Pressure exerted by a Force is defined as the **normal** force per unit area of the surface on which 
+        - Pressure exerted by a Force is defined as the normal force per unit area of the surface on which 
         the force is acting.
         - When a bomb explodes in relatively open spaces the forces exerted by the particles on its surroundings acts  
         on a larger area.
@@ -49,7 +49,7 @@ with tabs[0]:
         which results in higher pressure.
         
         A Force 'F_net' whose perpendicular component is 'F' acts on a surface of area 'A' then the Pressure 'P' acting on
-        the surface is given by 
+        the surface is given by
     
     """
 
@@ -99,6 +99,37 @@ with tabs[0]:
     else:
         st.info("Try Again")
 
+    """            
+    #### Pressure at a depth in a fluid 
+
+        - The pressure at any depth 'h' inside a fluid of density ρ_1 is given by:
+
+    """
+    P, h, g, density = symb('P h g ρ_1')
+
+    expr10 = h * density * g
+    expr11 = P
+    eq_2 = sy.Eq(expr10, expr11)
+    st.latex(f"{expr10}={expr11}")
+
+    """
+    #### Example
+    
+        Try to evaluate the pressure at a depth of 'h' metre from one of the fluids in the selection box.
+          
+    """
+
+    clmn3, clmn4 = st.columns(2)
+
+    with clmn3:
+        fluid_key = st.selectbox("Select the fluid",
+                                 options=Fluids)
+
+    with clmn4:
+        h = st.slider("Select the height in metres", min_value=0, max_value=1000)
+
+    st.latex("Pressure (in Pascal) = " + str(Fluids[fluid_key] * 10 * h))
+
     """
         #### Atmospheric Pressure and Barometer
 
@@ -111,14 +142,20 @@ with tabs[0]:
             
             - Closed end at the top has vacuum. Hg is drawn inside the tube because of the vacuum and it fills up to a 
             height which balances the atmospheric pressure acting at the bottom of the tube.
-    
-        ![Q4](https://i.ibb.co/x60vLGT/Q4.jpg "Q4")
-            
+    """
+
+    st.image("img/Mercury Barometer Display.png",
+             caption='Mercury Barometer',
+             width=400
+             )
+
+    """        
         ###### Q1. 
             If Mercury (Hg) in a Barometer is replaced with a liquid of lower density then the height of the column of 
             the new liquid would .... in comparison to that of the earlier Hg column.
              
     """
+
     A_1, A_2, A_3, A_4 = st.columns(4)
 
     with A_1:
@@ -146,20 +183,106 @@ with tabs[0]:
             st.warning("Try Again")
 
     """
+        
+        #### Pressure in U-tube columns
             
+            -   Pressure difference between two points inside the same fluid can be calculated using the expression
+            given below.        
+    """
+
+    ht, P = symb('height ΔP')
+
+    expr13 = ht * density * g
+    expr14 = P
+    eq_2 = sy.Eq(expr13, expr14)
+    st.latex(f"{expr13}={expr14}=GaugePressure")
+
+    """            
         #### Archimede`s Principle
         
             - When a body is immersed in a fluid then the upthrust exerted by the fluid on the the object 
-            is equal to the weight of the fluid displaced by the body. 
+            is equal to the weight of the fluid displaced by the body.
+            
+            - We can understand this idea by thinking in a way that if the submerged part of the body was replaced by 
+            the fluid itself which it is displacing then the fluid beneath the submerged body would "balance" the weight
+            of the fluid.
+            
+            - So if the displaced fluid is replaced by the object then the fluid beneath should act no differently.
+            
+            - The upthrust or buoyant force acting on the body would be the same as the one acting on the fluid in its place which 
+            is equal to the weight of the fluid.
             
     """
 
-    F_b, V, g = symb('Force Volume g')
+    F_b, V, g = symb('F_b Volume g')
 
     expr6 = V * dens * g
     expr7 = F_b
-    eq_2 = sy.Eq(expr6, expr7)
+    eq_3 = sy.Eq(expr6, expr7)
     st.latex(f"{expr6}={expr7}")
+
+    """        
+        ###### Q2.
+            
+            Evaluate the buoyant force on a block of wood immersed in water if 200 cm^3 of its volume is 
+            submerged in water. Density of water = 1000 kg / m^3, g = 10 m/s^2.  
+
+    """
+
+    A_5, A_6, A_7, A_8 = st.columns(4)
+
+    with A_5:
+        if st.button("4 N",
+                     key=A_5,
+                     use_container_width=True):
+            st.warning("Try Again")
+
+    with A_6:
+        if st.button("2 N",
+                     key=A_6,
+                     use_container_width=True):
+            st.success("Correct")
+
+    with A_7:
+        if st.button("20 N",
+                     key=A_7,
+                     use_container_width=True):
+            st.warning("Try Again")
+
+    with A_8:
+        if st.button("40 N",
+                     key=A_8,
+                     use_container_width=True):
+            st.warning("Try Again")
+
+    """
+        #### Buoyant Forces on bodies with cavities & impurities
+
+            - Upthrust forces exerted on the body by the fluids surrounding it is called the buoyant force.
+
+            - For bodies composed of different materials or those having cavities within them, we can apply 
+            this principle to evaluate the ratio of masses of the materials or the volume of the cavity.
+            
+            - Say an object is composed of two materials M_1 and M_2 of densities ρ_1 and ρ_2 , respectively
+            then the total buoyant force exerted by water if it was completely submerged in water would be equal to 
+    
+    """
+
+    F_b, ρ_1, ρ_2, V_1, V_2, g = symb('F_b ρ_1 ρ_2 V_1 V_2 g')
+
+    expr8 = V_1 * dens_w * g + V_2 * dens_w * g
+    expr9 = F_b
+    eq_4 = sy.Eq(expr8, expr9)
+    st.latex(f"{expr8}={expr9}")
+
+    """
+        #### Buoyant Forces on bodies with cavities & impurities 2
+            
+            - Note that we are not saying that the buoyant force would balance the weight of the object rather it exerts 
+            a certain force equal to the weight of the fluid displaced which depends on the volume displaced by M_1 and
+            M_2 combined. The oft used condition of flotation may cause this confusion.
+            
+    """
 
 with tabs[1]:
     """
@@ -167,270 +290,6 @@ with tabs[1]:
      
         - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
     """
-
-    expr = dens / dens_w
-    expr2 = r_dens
-    g = sy.Eq(expr, expr2)
-    st.latex(f"{expr2}={expr}")
-
-    """
-    #### Pressure & Atmospheric Pressure
-        
-        - Pressure exerted by a Force is defined as the **normal** force per unit area of the surface on which 
-        the force is acting.
-        - When a bomb explodes in relatively open spaces the forces exerted by the particles on its surroundings acts  
-        on a larger area.
-        - If it explodes in a confined space the forces remaining the same, have a smaller area to contend with
-        which results in higher pressure.
-        
-        A Force 'F_net' whose perpendicular component is 'F' acts on a surface of area 'A' then the Pressure 'P' acting on
-        the surface is given by
-    
-    """
-
-    expr3 = fo / ar
-    expr4 = press
-    h = sy.Eq(expr3, expr4)
-    st.latex(f"{expr3}={expr4}")
-
-    """
-    #### Units of Pressure
-    
-        - SI unit of pressure is 1 newton / m^2 which is equal to 1 Pascal.
-        
-        - A Force 'F' is acting on a surface area of 20 cm^2. F = 50 newton acts at angle of 30 degree to the normal.
-        If 25 * sqrt(3) = 43.3, then find the pressure acting on the surface by entering the info below.
-        
-    """
-
-    F1 = 50
-    Area = 0.002
-
-    try:
-        F1 = float(st.text_input(label='Enter Force',
-                                 key='F2',
-                                 placeholder='in Newton',
-                                 disabled=True))
-    except ValueError:
-        st.info(prompt,
-                icon="🙀")
-
-    try:
-        Area = float(st.text_input(label='Enter Area',
-                                   key='A2',
-                                   placeholder='Enter the area in SI units',
-                                   disabled=True))
-    except ValueError:
-        st.info(prompt,
-                icon="🙀")
-
-    expr5 = F1 / Area
-
-    st.latex(f" Pressure = {expr5}")
-
-with tabs[2]:
-    """
-    ## Fluid Dynamics
-     
-        - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
-    """
-
-    expr = dens / dens_w
-    expr2 = r_dens
-    g = sy.Eq(expr, expr2)
-    st.latex(f"{expr2}={expr}")
-
-    """
-    #### Pressure & Atmospheric Pressure
-        
-        - Pressure exerted by a Force is defined as the **normal** force per unit area of the surface on which 
-        the force is acting
-        - When a bomb explodes in relatively open spaces the forces exerted by the particles on its surroundings acts  
-        on a larger area.
-        - If it explodes in a confined space the forces remaining the same, have a smaller area to contend with
-        which results in higher pressure.
-        
-        A Force 'F_net' whose perpendicular component is 'F' acts on a surface of area 'A' then the Pressure 'P' acting on
-        the surface is given by 
-    
-    """
-
-    expr3 = fo / ar
-    expr4 = press
-    h = sy.Eq(expr3, expr4)
-    st.latex(f"{expr3}={expr4}")
-
-    """
-    #### Units of Pressure
-    
-        - SI unit of pressure is 1 newton / m^2 which is equal to 1 Pascal.
-        
-        - A Force 'F' is acting on a surface area of 20 cm^2. F = 50 newton acts at angle of 30 degree to the normal.
-        If 25 * sqrt(3) = 43.3, then find the pressure acting on the surface by entering the info below.
-        
-    """
-
-    F1 = 50
-    Area = 0.002
-
-    clmn1, clmn2 = st.columns(2)
-
-    with clmn1:
-        try:
-            F1 = float(st.text_input(label='Enter Force',
-                                     key='F3',
-                                     placeholder='in Newton',
-                                     disabled=True))
-        except ValueError:
-            F1 = 50
-
-    with clmn2:
-        try:
-            Area = float(st.text_input(label='Enter Area',
-                                       key='A3',
-                                       placeholder='Enter the area in SI units',
-                                       disabled=True
-                                       ))
-        except ValueError:
-            Area = 0.002
-
-    expr5 = F1 / Area
-
-    st.latex(f" Pressure = {expr5}")
-
-with tabs[3]:
-    """
-    ## Surface Tension
-     
-        - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
-    """
-
-    expr = dens / dens_w
-    expr2 = r_dens
-    g = sy.Eq(expr, expr2)
-    st.latex(f"{expr2}={expr}")
-
-    """
-    #### Pressure & Atmospheric Pressure
-        
-        - Pressure exerted by a Force is defined as the **normal** force per unit area of the surface on which 
-        the force is acting.
-        - When a bomb explodes in relatively open spaces the forces exerted by the particles on its surroundings acts  
-        on a larger area.
-        - If it explodes in a confined space the forces remaining the same, have a smaller area to contend with
-        which results in higher pressure.
-        
-        A Force 'F_net' whose perpendicular component is 'F' acts on a surface of area 'A' then the Pressure 'P' acting on
-        the surface is given by 
-    
-    """
-
-    expr3 = fo / ar
-    expr4 = press
-    h = sy.Eq(expr3, expr4)
-    st.latex(f"{expr3}={expr4}")
-
-    """
-    #### Units of Pressure
-    
-        - SI unit of pressure is 1 newton / m^2 which is equal to 1 Pascal.
-        
-        - A Force 'F' is acting on a surface area of 20 cm^2. F = 50 newton acts at angle of 30 degree to the normal.
-        If 25 * sqrt(3) = 43.3, then find the pressure acting on the surface by entering the info below.
-        
-    """
-
-    F1 = 50
-    Area = 0.002
-    try:
-        F1 = float(st.text_input(label='Enter Force',
-                                 key='F4',
-                                 placeholder='in Newton',
-                                 disabled=True))
-    except ValueError:
-        st.info(prompt,
-                icon="🙀")
-
-    try:
-        Area = float(st.text_input(label='Enter Area',
-                                   key='A4',
-                                   placeholder='Enter the area in SI units',
-                                   disabled=True
-                                   ))
-    except ValueError:
-        st.info(prompt,
-                icon="🙀")
-
-    expr5 = F1 / Area
-
-    st.latex(f" Pressure = {expr5}")
-
-with tabs[4]:
-    """
-    ## Viscosity and Terminal Velocity
-     
-        - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
-    """
-
-    expr = dens / dens_w
-    expr2 = r_dens
-    g = sy.Eq(expr, expr2)
-    st.latex(f"{expr2}={expr}")
-
-    """
-    #### Pressure & Atmospheric Pressure
-        
-        - Pressure exerted by a Force is defined as the **normal** force per unit area of the surface on which 
-        the force is acting.
-        - When a bomb explodes in relatively open spaces the forces exerted by the particles on its surroundings acts  
-        on a larger area.
-        - If it explodes in a confined space the forces remaining the same, have a smaller area to contend with
-        which results in higher pressure.
-        
-        A Force 'F_net' whose perpendicular component is 'F' acts on a surface of area 'A' then the Pressure 'P' acting on
-        the surface is given by 
-    
-    """
-
-    expr3 = fo / ar
-    expr4 = press
-    h = sy.Eq(expr3, expr4)
-    st.latex(f"{expr3}={expr4}")
-
-    """
-    #### Units of Pressure
-    
-        - SI unit of pressure is 1 newton / m^2 which is equal to 1 Pascal.
-        
-        - A Force 'F' is acting on a surface area of 20 cm^2. F = 50 newton acts at angle of 30 degree to the normal.
-        If 25 * sqrt(3) = 43.3, then find the pressure acting on the surface by entering the info below.
-        
-    """
-
-    F1 = 50
-    Area = 0.002
-    try:
-        F1 = float(st.text_input(label='Enter Force',
-                                 key='F5',
-                                 placeholder='in Newton',
-                                 disabled=True))
-    except ValueError:
-        st.info(prompt,
-                icon="🙀")
-
-    try:
-        Area = float(st.text_input(label='Enter Area',
-                                   key='A5',
-                                   placeholder='Enter the area in SI units',
-                                   disabled=True
-                                   ))
-    except ValueError:
-        st.info(prompt,
-                icon="🙀")
-
-    expr5 = F1 / Area
-
-    st.latex(f" Pressure = {expr5}")
 
     data = {'Reynolds Number': [6000, 5000, 4000, 3000, 2000, 1000],
             'Viscosity': [0.166, 0.2, 0.25, 0.333, 0.5, 1]}
@@ -445,13 +304,24 @@ with tabs[4]:
 
     st.line_chart(data, x=option, y=option_2)
 
+with tabs[2]:
+    """
+    ## Fluid Dynamics
+     
+        - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
+    """
+
+with tabs[3]:
+    """
+    ## Surface Tension
+     
+        - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
+    """
+
 # Questions and Answers
+    accl, dist = symb('distance acceleration')
+    expr12 = dist * dens_w * accl
 
-with st.expander("Q 1. If you had to design pipes used to transport water a boiler in power plant , "
-                 "what dimensional and material specifications would you consider ?"):
-    st.write('')
-
-with st.expander("Q 2. If a student plots a graph of Reynolds Number versus coefficient of viscosity of a fluid "
-                 "for a given density of the fluid, speed of fluid, and diameter of the pipe, what would the graph look"
-                 " like ?"):
-    st.write('')
+with st.expander("Q 1. What is the pressure difference in water which is horizontally accelerating, between two "
+                 "points at the same horizontal level?"):
+    st.latex(f"{expr12}={expr11}")

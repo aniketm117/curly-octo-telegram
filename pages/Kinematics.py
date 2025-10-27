@@ -1,10 +1,10 @@
 import streamlit as st
 import sympy as sy
-from sympy import symbols as symb
+from sympy import *
 
 st.info("🎯 All Questions mentioned are Multiple choices Single correct type")
 
-tabs = st.tabs(['Section A', 'Section B', 'Section C'])
+tabs = st.tabs(['Kinematics', 'Differentiation', 'Integration'])
 
 with tabs[0]:
     """
@@ -28,10 +28,10 @@ with tabs[0]:
     ### Frame of Reference
     
         - A frame of reference is a set of three mutually perpendicular axes which intersect at origin (named O), 
-        along with a clock to measure time. 
+        along with a clock to measure time.
         
         - For Competitive examinations or Boards, we commonly use the same coordinate system which you might have 
-        studied in Class X. 
+        studied in Class X.
         
         - The frame of reference can be attached to a particle or to a rigid body or fixed in space 
         and therefore provide an "absolute" point of view when studying motion of other objects.
@@ -42,11 +42,12 @@ with tabs[0]:
     
         - The coordinates of the particle (x,y,z) relative to the origin (O) is the position of the particle.
      
-        - The values x, y and z represent the distance to be moved from the origin along the respective axis to reach the 
-          particle. For example, (2,3,9) m represents the particle can be found by moving 2m along x axis, 3m along y axis, and 9m along z 
-          axis, in no particular order (i.e. any order). 
+        - The values x, y and z represent the distance to be moved from the origin along the respective axis to reach 
+        the particle. For example, (2,3,9) m represents the particle can be found by moving 2m along x axis, 3m along y 
+        axis, and 9m along z axis, in no particular order (i.e. any order).
     
-        - Position of a particle can be represented as **a vector**, where if (x,y,z) is the position of the particle then the corresponding vector is,
+        - Position of a particle can be represented as a vector, where if (x,y,z) is the position of the particle then
+         the corresponding vector is,
     
     ![position](https://i.ibb.co/sKFzGwk/position.jpg "position")
     
@@ -55,9 +56,9 @@ with tabs[0]:
         
     ![pos1](https://i.ibb.co/j5Cz9z8/pos1.jpg "pos1")
     
-        The Position of a particle moving on a straight line can be represented by x, where x > 0 represents the particle 
-        existing on the positive side and x < 0 represents the particle existing on the negative side of the origin ( x = 0 
-        ).
+        The Position of a particle moving on a straight line can be represented by x, where x > 0 represents the 
+        particle existing on the positive side and x < 0 represents the particle existing on the negative side of the
+         origin ( x = 0 ).
         
     ![Star_Wars](https://i.ibb.co/2Pvr87S/Star-Wars.jpg "Star_Wars")
 
@@ -106,7 +107,7 @@ with tabs[0]:
         
     ## Displacement
     
-        - Displacement of a particle is defined as <i>the shortest distance</i> between initial and final position, alongwith a direction from the initial to final position. Displacement of a particle in going from initial to final position is <i>independent</i> of the path taken, which is beacuse of the way it is defined. In the example drawn below a particle goes from r1 to r2, and the displacement is equal to r2 - r1. 
+        - Displacement of a particle is defined as the shortest distance between initial and final position, alongwith a direction from the initial to final position. Displacement of a particle in going from initial to final position is <i>independent</i> of the path taken, which is beacuse of the way it is defined. In the example drawn below a particle goes from r1 to r2, and the displacement is equal to r2 - r1. 
     
     ![Disp](https://i.ibb.co/h79Zj8t/Disp.jpg "Disp")
     
@@ -129,6 +130,7 @@ with tabs[0]:
          path ABC from A to C.
         
     ![Q4](https://i.ibb.co/x60vLGT/Q4.jpg "Q4")
+    
     """
     st.page_link("https://aniketm117.github.io/github-pages-with-jekyll/2023/02/09/long-time-no-post.html",
                  label="Is this a Question of Kinematics ?"
@@ -138,20 +140,29 @@ with tabs[1]:
     """  
     ## Differentiation
 
-        - '\u0394y' represents the displacement of a particle at an instant then the term '\u0394y/\u0394x' represents the average 
-        velocity of the particle om the time interval \u0394x. 
+        - Say a particle moves in a time interval \u0394x = x\u2082 - x\u2081.
         
-        - Time interval \u0394x = x\u2082 - x\u2081.
+        - '\u0394y' represents the displacement of a particle in the time interval then the term '\u0394y/\u0394x' is the average
+        velocity of the particle in the time interval \u0394x. 
         
-        - In the limiting case x\u2081 and x\u2082 are infinitesimally close to each other '\u0394y/\u0394x' becomes dy/dx,
-        which implies we have determined the instantaneous velocity of the particle at an instant.
+        - In the limiting case x\u2081 and x\u2082 are infinitesimally close to each other the term '\u0394y/\u0394x' becomes
+        dy/dx, physically we have taken two instants and brought them so close that the displacement also is
+        infinitesimally small.
+          
+        - Which implies we have determined the instantaneous velocity of the particle at an instant using the definition
+        of average velocity.
     
         - Refer to section A for an explainer on displacement of a particle.
     
         - dy/dx refers to differentiation of y wrt x or derivative of y wrt x.
     
     """
-    st.latex("Q1. d(x)/dx =")
+
+    x, y, z = sy.symbols('x y z')
+
+    st.write("###### Q1.")
+
+    st.latex("dx/dx = ")
 
     A_1, A_2, A_3, A_4 = st.columns(4)
 
@@ -168,7 +179,9 @@ with tabs[1]:
         if st.button("None", key=A_4, use_container_width=True):
             st.warning("Try Again")
 
-    st.latex("Q2. d(x\u207F)/dx =")
+    st.write("###### Q2.")
+
+    st.latex("d(x\u207F)/dx =")
 
     A_5, A_6, A_7, A_8 = st.columns(4)
 
@@ -185,7 +198,9 @@ with tabs[1]:
         if st.button("None", key=A_8, use_container_width=True):
             st.warning("Try Again")
 
-    st.latex("Q3. d(cos(x))/dx =")
+    st.write("###### Q3.")
+
+    st.latex("d(cos(x))/dx =")
 
     A_9, A_10, A_11, A_12 = st.columns(4)
 
@@ -202,7 +217,9 @@ with tabs[1]:
         if st.button("cosec ^2 (x)", key=A_12, use_container_width=True):
             st.warning("Try Again")
 
-    st.latex("Q4. d(sin(A*x))/dx = ")
+    st.write("###### Q4.")
+
+    st.latex("d(sin(A*x)/dx")
 
     A_13, A_14, A_15, A_16 = st.columns(4)
 
@@ -219,10 +236,12 @@ with tabs[1]:
         if st.button("A * cosec(A*x)", key=A_16, use_container_width=True):
             st.warning("Try Again")
 
-    A1, A2, A3 = st.columns(3)
 
 with tabs[2]:
-    ""
+
+    st.write("###### Q1.")
+
+    st.latex(Integral(cos(x) ** 2, (x, 0, pi)))
 
 sentiment_mapping = [0, 1]
 selected = st.feedback("thumbs")

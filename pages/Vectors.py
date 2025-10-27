@@ -3,18 +3,22 @@ import streamlit as st
 # Vectors
 
 """
-    ## Vectors
+    ## Vectors & Scalars
 
         - Many quantities we think about daily can be described by a single number: temperature, speed, mass, weight and
-         height. 
+         height. They are called scalars.
         
         - There are also many other concepts we encounter daily that cannot be described with just one number. For 
         instance, a weather forecaster often describes wind with its speed and its direction.
+        
+        - When applying a force, we are concerned with both the magnitude and direction of that force.
 """
 
-st.info("When applying a force, we are concerned with both the magnitude and direction of that force."
-        "A vector is a physical quantity with magnitude and direction parameters, and which follows triangle"
-        " rule of vector addition")
+st.info("""
+        ### Vectors: Definition
+
+             A vector is a physical quantity with magnitude and direction parameters, and which follows triangle
+             rule of vector addition""")
 
 with st.expander("Q 1.	At what angle three forces of equal magnitude may act so that their"
                  " resultant is equal to zero."):
