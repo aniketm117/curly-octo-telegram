@@ -9,12 +9,12 @@ st.title('📚 What is Physics ?')
 #
 # st.audio(audio_bytes, format="audio/mp3")
 
-clmn1, clmn2, clmn3, clmn4, clmn5 = st.columns(5)
+clmn1, clmn2, clmn3 = st.columns(3)
 
 with clmn1:
     st.page_link("pages/Vectors.py",
                  label="Vectors",
-                 icon="📊",
+                 icon="🏹",
                  use_container_width=True)
 
 with clmn2:
@@ -29,14 +29,22 @@ with clmn3:
                  icon="🌊",
                  use_container_width=True)
 
+clmn4, clmn5 ,clmn6 = st.columns(3)
+
 with clmn4:
-    st.page_link("pages/Roadmap.py",
-                 label="Roadmap",
-                 icon="🧙",
+    st.page_link("pages/Fluid_Mechanics.py",
+                 label="Fluid Mechanics",
+                 icon="💧",
                  use_container_width=True)
 
 with clmn5:
     st.page_link("pages/Kinematics.py",
                  label="Kinematics",
                  icon="🏀",
+                 use_container_width=True)
+
+with clmn6:
+    st.page_link("pages/Roadmap.py",
+                 label="Roadmap",
+                 icon='🌉',
                  use_container_width=True)
