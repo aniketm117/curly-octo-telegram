@@ -38,8 +38,9 @@ with st.expander("Q 3.	There are three forces 4N, 5N and 10 N, can their resulta
             
              No, these forces cannot form a triangle.""")
 
-# with st.expander("Q 4.	There are three forces 4N, 6N and 8 N can their resultant be equal to zero."):
-#     st.write("Yes")
+with st.expander("Q 4.	There are three forces 4N, 6N and 8 N can their resultant be equal to zero."):
+    st.write("Yes")
+
 #
 # with st.expander("Q 5.	Can the resultant of two unequal forces be equal to zero."):
 #     st.write("No")

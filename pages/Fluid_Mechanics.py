@@ -24,7 +24,7 @@ tabs = st.tabs(['Fluid Statics', 'Streamline & Turbulent Flow', 'Fluid Dynamics'
 
 with tabs[0]:
     """
-    ## Fluid Statics
+    ### Fluid Statics
     
         - Relative Density (ρ_r) = Density of the substance (ρ) / Density of water at triple point (ρ_w)         
     """
@@ -131,28 +131,28 @@ with tabs[0]:
     st.latex("Pressure (in Pascal) = " + str(Fluids[fluid_key] * 10 * h))
 
     """
-        #### Atmospheric Pressure and Barometer
+    #### Atmospheric Pressure and Barometer
 
-            - The pressure exerted by air on the objects at sea level is defined as atmospheric pressure. It is quiet
-            imperceptible as its value is less in comparison to pressures which operate around us like the pressure 
-            inside the tyres of an airplane, or pressure exerted by water jet on hydro power plant turbines.
+        - The pressure exerted by air on the objects at sea level is defined as atmospheric pressure. It is quiet
+        imperceptible as its value is less in comparison to pressures which operate around us like the pressure 
+        inside the tyres of an airplane, or pressure exerted by water jet on hydro power plant turbines.
 
-            - Its value is measured in 1 cm of Hg. Barometer is a device used to measure atmospheric measure using a
-            sufficiently long transparent tube closed at one end and open at another, dipped in a slurry of Hg. 
-            
-            - Closed end at the top has vacuum. Hg is drawn inside the tube because of the vacuum and it fills up to a 
-            height which balances the atmospheric pressure acting at the bottom of the tube.
+        - Its value is measured in 1 cm of Hg. Barometer is a device used to measure atmospheric measure using a
+        sufficiently long transparent tube closed at one end and open at another, dipped in a slurry of Hg.
+        
+        - Closed end at the top has vacuum. Hg is drawn inside the tube because of the vacuum and it fills up to a 
+        height which balances the atmospheric pressure acting at the bottom of the tube.
     """
 
     st.image("img/Mercury Barometer Display.png",
-             caption='Mercury Barometer',
-             width=400
+             caption='AI Image - Mercury Barometer',
+             width=300
              )
 
     """        
-        ###### Q1. 
-            If Mercury (Hg) in a Barometer is replaced with a liquid of lower density then the height of the column of 
-            the new liquid would .... in comparison to that of the earlier Hg column.
+    ###### Q1. 
+        If Mercury (Hg) in a Barometer is replaced with a liquid of lower density then the height of the column of 
+        the new liquid would .... in comparison to that of the earlier Hg column.
              
     """
 
@@ -183,11 +183,10 @@ with tabs[0]:
             st.warning("Try Again")
 
     """
+    #### Pressure in U-tube columns
         
-        #### Pressure in U-tube columns
-            
-            -   Pressure difference between two points inside the same fluid can be calculated using the expression
-            given below.        
+        -   Pressure difference between two points situated at a height difference 'h' inside the same fluid can be 
+        calculated using the expression given below.
     """
 
     ht, P = symb('height ΔP')
@@ -197,20 +196,88 @@ with tabs[0]:
     eq_2 = sy.Eq(expr13, expr14)
     st.latex(f"{expr13}={expr14}=GaugePressure")
 
-    """            
-        #### Archimede`s Principle
+    """
+    #### Absolute Pressure and Pressure at interface of two fluids
+
+        -   In a U-tube manometer open on both sides as shown in the figure below.
         
-            - When a body is immersed in a fluid then the upthrust exerted by the fluid on the the object 
-            is equal to the weight of the fluid displaced by the body.
-            
-            - We can understand this idea by thinking in a way that if the submerged part of the body was replaced by 
-            the fluid itself which it is displacing then the fluid beneath the submerged body would "balance" the weight
-            of the fluid.
-            
-            - So if the displaced fluid is replaced by the object then the fluid beneath should act no differently.
-            
-            - The upthrust or buoyant force acting on the body would be the same as the one acting on the fluid in its place which 
-            is equal to the weight of the fluid.
+        -   The pressure exerted by the fluid 1 at point A is P_A, it is the sum of atmospheric pressure of the 
+        air above the fluid and the gauge pressure due to the fluid 1.
+        
+        -   The pressure exerted by the fluid 2 at point B is P_B.
+        
+        -   When considering pressure at the common surface of the two fluids say 1 and 2. The
+         pressure exerted by the two fluids i.e. 1 and 2 equalize.
+         
+        -   Pressure exerted by fluid 2 at points A (common surface) and B is same because they lie at the same 
+        horizontal level. Pressure inside a fluid at the same horizontal level is equal.           
+    
+    """
+
+    st.image('img/Fluid Dynamics in U-Tube.png',
+             caption='AI Image - Fluids in a U-tube',
+             width=300)
+
+    ht_1, ht_2, P_A, P_B, dens_1, dens_2, P_atm = symb('h_1 h_2 P_A P_B ρ_1 ρ_2 P_0')
+
+    expr15 = P_atm + dens_1 * g * ht_1
+    expr16 = P_atm + dens_2 * g * ht_2
+    eq_3 = sy.Eq(expr15, expr16)
+    st.latex(f"AbsolutePressure_A ={expr15}={P_A}")
+    st.latex(f"AbsolutePressure_B ={expr16}={P_B}")
+    st.latex(f"{expr15}={expr16}")
+
+    """
+    ###### Q2.
+        In a U-tube water is poured to a certain level, then an unknown fluid (say X) whose density is 0.6 times the
+        the density of water is filled in one of the arms. The height difference in the column of water and that of 
+        unknown fluid is 5 cm. Then find the length of column 'X' poured over water.
+    """
+
+    try:
+        length = float(st.text_input(label='Height of fluid X',
+                                     placeholder='Enter the height in centimetre until a single decimal place'))
+    except ValueError:
+        length = 0
+
+    if length == 12.5:
+        st.success("Correct")
+    else:
+        st.info("Try Again")
+
+    """
+    ###### Q3.
+        As per ideal gas law, P = k * T for a gas if it is maintained at constant volume (k is a positive constant). A 
+        manometer contains Hg to a height 10 cm above the level in the other column. Find the change in temperature 'T' 
+        of the gas if the height increases to 20 cm above the other column, consider the atmospheric pressure to be 
+        negligible.  
+    """
+
+    try:
+        T_1 = float(st.text_input(label='Change in temperature of the gas',
+                                  placeholder='Enter the change in temperature in Kelvin'))
+    except ValueError:
+        T_1 = 100
+
+    if T_1 == 273:
+        st.success("Correct")
+    else:
+        st.info("Try Again")
+
+    """            
+    #### Archimede`s Principle
+    
+        - When a body is immersed in a fluid then the upthrust exerted by the fluid on the the object 
+        is equal to the weight of the fluid displaced by the body.
+        
+        - We can understand this idea by thinking in a way that if the submerged part of the body was replaced by 
+        the fluid itself which it is displacing then the fluid beneath the submerged body would "balance" the weight
+        of the fluid.
+        
+        - So if the displaced fluid is replaced by the object then the fluid beneath should act no differently.
+        
+        - The upthrust or buoyant force acting on the body would be the same as the one acting on the fluid in its place which 
+        is equal to the weight of the fluid.
             
     """
 
@@ -222,7 +289,7 @@ with tabs[0]:
     st.latex(f"{expr6}={expr7}")
 
     """        
-        ###### Q2.
+        ###### Q4.
             
             Evaluate the buoyant force on a block of wood immersed in water if 200 cm^3 of its volume is 
             submerged in water. Density of water = 1000 kg / m^3, g = 10 m/s^2.  
