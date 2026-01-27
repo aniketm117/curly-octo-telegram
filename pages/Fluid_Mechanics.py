@@ -35,7 +35,6 @@ with tabs[0]:
     st.latex(f"{expr2}={expr}")
 
     Fluids = {'Mercury': 13600, 'Water': 1000, 'Kerosene Oil': 800, 'Castor Oil': 915, 'Honey': 1415, 'Blood': 1060}
-
     st.bar_chart(data=Fluids, x_label='Fluids', y_label='Densities')
 
     """
@@ -250,7 +249,7 @@ with tabs[0]:
         As per ideal gas law, P = k * T for a gas if it is maintained at constant volume (k is a positive constant). A 
         manometer contains Hg to a height 10 cm above the level in the other column. Find the change in temperature 'T' 
         of the gas if the height increases to 20 cm above the other column, consider the atmospheric pressure to be 
-        negligible.  
+        negligible. [Initial Temperature = 273 K] 
     """
 
     try:
@@ -292,7 +291,7 @@ with tabs[0]:
         ###### Q4.
             
             Evaluate the buoyant force on a block of wood immersed in water if 200 cm^3 of its volume is 
-            submerged in water. Density of water = 1000 kg / m^3, g = 10 m/s^2.  
+            submerged in water. Density of water = 1000 kg / m^3, g = 10 m/s^2.
 
     """
 
@@ -351,6 +350,20 @@ with tabs[0]:
             
     """
 
+    """
+        #### Pressure in vertically accelerated fluids
+
+            - When a container is accelerated vertically if we imagine a hypothetical cylinder inside the fluid within 
+            the container
+
+            - For bodies composed of different materials or those having cavities within them, we can apply 
+            this principle to evaluate the ratio of masses of the materials or the volume of the cavity.
+
+            - Say an object is composed of two materials M_1 and M_2 of densities ρ_1 and ρ_2 , respectively
+            then the total buoyant force exerted by water if it was completely submerged in water would be equal to 
+
+        """
+
 with tabs[1]:
     """
     ## Streamline and Turbulent FLow
@@ -361,7 +374,8 @@ with tabs[1]:
     data = {'Reynolds Number': [6000, 5000, 4000, 3000, 2000, 1000],
             'Viscosity': [0.166, 0.2, 0.25, 0.333, 0.5, 1]}
 
-    option = st.selectbox("Select the data to be shown on x-axis",
+    option = st.selectbox("Graphs of Re and Viscosity if the product of speed of flow, density of fluid and diameter of"
+                          " pipe is kept constant.",
                           ['Reynolds Number', 'Viscosity'])
 
     if option == 'Reynolds Number':
@@ -392,3 +406,9 @@ with tabs[3]:
 with st.expander("Q 1. What is the pressure difference in water which is horizontally accelerating, between two "
                  "points at the same horizontal level?"):
     st.latex(f"{expr12}={expr11}")
+
+sentiment_mapping = [0, 1]
+selected = st.feedback("thumbs")
+if selected is not None:
+    st.markdown("Thanks for your feedback!")
+

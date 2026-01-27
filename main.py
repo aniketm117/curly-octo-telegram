@@ -2,12 +2,15 @@ import streamlit as st
 
 # Page title
 st.set_page_config(page_title='What is Physics ?', page_icon='📚')
-st.title('📚 What is Physics ?')
+st.title('🛑 You are trespassing a private area')
 
 # audio_file = open("audio/Spotify.mp3", "rb")
 # audio_bytes = audio_file.read()
 #
 # st.audio(audio_bytes, format="audio/mp3")
+
+st.image('img/stop_arnold.jpg',
+         '67')
 
 clmn1, clmn2, clmn3 = st.columns(3)
 
