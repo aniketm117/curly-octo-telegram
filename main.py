@@ -21,7 +21,7 @@ with clmn1:
                  use_container_width=True)
 
 with clmn2:
-    st.page_link("pages/Current_Electricity.py",
+    st.page_link("pages/Ohms_Law.py",
                  label="Current Electricity",
                  icon="🔋",
                  use_container_width=True)
